@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto  px-6 grid md:grid-cols-4 gap-8 ">
         {/* brand */}
         <div>
-          <h3 className="text-xl font-bold text-white">One Stop Carz</h3>
+          <h3 className="text-l font-bold text-white">One Stop Carz</h3>
           <p className="mt-3 text-xl">
             Complete car care solutions – servicing, detailing, insurance claims
             and maintenance packages in one place.
@@ -49,7 +49,7 @@ export default function Footer() {
         {/* CTA */}
         <div>
           <h4 className="font-semibold text-white mb-3">Book Now</h4>
-          <p className="text-xl mb-4">
+          <p className="text-l mb-4">
             Call us or book your service online instantly.
           </p>
           <button className="bg-red-600 hover:bg-red-700 px-5 py-2 rounded-md text-white font-semibold">
