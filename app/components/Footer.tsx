@@ -52,9 +52,12 @@ export default function Footer() {
           <p className="text-l mb-4">
             Call us or book your service online instantly.
           </p>
-          <button className="bg-red-600 hover:bg-red-700 px-5 py-2 rounded-md text-white font-semibold">
-            Book Service
-          </button>
+          <Link href="/booking">
+  <button className="bg-red-600 hover:bg-red-700 px-5 py-2 rounded-md text-white font-semibold">
+    Book Service
+  </button>
+</Link>
+
         </div>
       </div>
 
