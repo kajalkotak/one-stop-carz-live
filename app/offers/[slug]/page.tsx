@@ -1,42 +1,57 @@
 // app/offers/[slug]/page.tsx
 
-import { offers } from "@/app/data/offers";
-import Link from "next/link";
-import Image from "next/image";
+import { packages } from "@/app/data/packages";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 export default async function OfferDetailPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  // unwrap params Promise
   const { slug } = await params;
 
-  const offer = offers.find((o) => o.slug === slug);
+  const item = packages.find((p) => p.slug === slug);
 
-  if (!offer) {
+  if (!item) {
     notFound();
   }
 
   return (
     <main className="min-h-screen bg-gray-50 px-6 py-20">
       <div className="max-w-5xl mx-auto bg-white rounded-xl shadow p-10">
-        <Image
-          src={offer.image}
-          alt={offer.title}
-          width={800}
-          height={400}
-          className="rounded-lg mb-8"
-        />
+        {/* TITLE */}
+        <h1 className="text-4xl font-bold">{item.title}</h1>
 
-        <h1 className="text-4xl font-bold">{offer.title}</h1>
+        {item.duration && <p className="mt-1 text-gray-500">{item.duration}</p>}
 
-        <p className="mt-4 text-gray-700 text-lg">{offer.description}</p>
+        {/* DESCRIPTION */}
+        <p className="mt-4 text-lg text-gray-700">{item.description}</p>
 
-        <div className="mt-8 flex gap-4">
+        {/* PRICE */}
+        <div className="mt-6 text-xl font-semibold text-red-600">
+          {item.fixedPrice && <>₹{item.fixedPrice}</>}
+          {item.petrolPrice && <>Petrol: ₹{item.petrolPrice}</>}
+          {item.dieselPrice && <> | Diesel: ₹{item.dieselPrice}</>}
+        </div>
+
+        {/* INCLUDES */}
+        <div className="mt-8">
+          <h3 className="text-2xl font-semibold mb-3">What’s Included</h3>
+
+          <ul className="list-disc pl-6 space-y-2">
+            {item.includes.map((inc) => (
+              <li key={inc} className="text-gray-700">
+                {inc}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* ACTIONS */}
+        <div className="mt-10 flex gap-4">
           <Link
-            href={`/booking?service=${encodeURIComponent(offer.title)}`}
+            href={`/booking?service=${encodeURIComponent(item.title)}`}
             className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-semibold"
           >
             Book Now

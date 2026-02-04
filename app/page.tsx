@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { offers } from "@/app/data/offers";
+import { packages } from "@/app/data/packages";
 import Counter from "./components/Counter";
 
 export default function Home() {
@@ -214,33 +214,29 @@ export default function Home() {
 
           {/* OFFERS GRID */}
           <div className="mt-14 grid md:grid-cols-4 gap-8">
-            {offers.slice(0, 4).map((offer) => (
+            {packages.slice(0, 4).map((item) => (
               <motion.div
-                key={offer.slug}
+                key={item.slug}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
                 className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition flex flex-col"
               >
-                <h3 className="text-xl font-semibold">{offer.title}</h3>
+                <h3 className="text-xl font-semibold">{item.title}</h3>
 
-                <p className="mt-3 text-gray-600 flex-grow">
-                  {offer.shortDesc}
-                </p>
+                <p className="mt-3 text-gray-600 flex-grow">{item.shortDesc}</p>
 
-                <div className="mt-6 flex gap-3 flex-wrap justify-center">
-                  {/* DETAIL PAGE */}
+                <div className="mt-6 flex gap-3 justify-center">
                   <Link
-                    href={`/offers/${offer.slug}`}
+                    href={`/offers/${item.slug}`}
                     className="border border-red-600 text-red-600 px-4 py-2 rounded-md font-semibold hover:bg-red-600 hover:text-white transition"
                   >
                     View Details
                   </Link>
 
-                  {/* BOOKING */}
                   <Link
-                    href={`/booking?service=${encodeURIComponent(offer.title)}`}
+                    href={`/booking?service=${encodeURIComponent(item.title)}`}
                     className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md font-semibold"
                   >
                     Book Now
