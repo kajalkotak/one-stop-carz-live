@@ -5,10 +5,13 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { packages } from "@/app/data/packages";
 import Counter from "./components/Counter";
+import LimitedOfferPopup from "@/app/components/LimitedOfferPopup";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50">
+      <LimitedOfferPopup />
+
       {/* HERO SECTION */}
       <section className="bg-gradient-to-r from-black to-gray-900 text-white py-28 px-6 text-center">
         <motion.h1
@@ -280,7 +283,6 @@ export default function Home() {
               { label: "Years Experience", number: 9, suffix: "+" },
               { label: "Cars Serviced", number: 1000, suffix: "+" },
               { label: "Happy Customers", number: 200, suffix: "+" },
-              
             ].map((stat) => (
               <motion.div
                 key={stat.label}
