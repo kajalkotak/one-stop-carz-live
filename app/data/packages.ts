@@ -73,41 +73,75 @@ export const packages: PackageItem[] = [
   },
 
   // ---------------- AMC ----------------
-  {
-    slug: "gold-amc",
-    category: "amc",
-    title: "Gold AMC",
-    duration: "1 Year",
-    fixedPrice: 1999,
-    shortDesc: "Affordable annual maintenance coverage.",
-    description:
-      "Gold AMC includes 2 PMS services, wheel alignment and AC check-ups during the validity period.",
-    includes: ["2 PMS Services", "2 Wheel Alignments", "2 AC Check-ups"],
-  },
 
-  {
-    slug: "platinum-amc",
-    category: "amc",
-    title: "Platinum AMC",
-    duration: "1.5 Years",
-    fixedPrice: 2999,
-    shortDesc: "Extended AMC with brake disc cutting.",
-    description:
-      "Platinum AMC offers 3 PMS services, brake disc cutting and priority servicing benefits.",
-    includes: ["3 PMS Services", "Brake Disc Cutting", "Priority Service"],
-  },
+{
+  slug: "gold-amc",
+  category: "amc",
+  title: "Gold AMC",
+  duration: "1 Year",
+  fixedPrice: 1999,
+  shortDesc: "Essential care package for worry-free car maintenance.",
+  description:
+    "Gold AMC is designed for cost-effective annual car care with two complete service cycles ensuring smooth performance throughout the year.",
+  includes: [
+    "2 PMS (Periodic Maintenance Services)",
+    "2 Wheel Alignments",
+    "2 Wheel Balancings",
+    "2 Tyre Rotations",
+    "2 AC Check-ups",
+    "2 Electrical Check-ups",
+    "2 Brake Check-ups",
+    "2 Wiper Washer Fluid Top-ups",
+    "2 Oil Filter Replacements",
+  ],
+},
 
-  {
-    slug: "diamond-amc",
-    category: "amc",
-    title: "Diamond AMC",
-    duration: "2 Years",
-    fixedPrice: 4999,
-    shortDesc: "Premium AMC with headlight restoration.",
-    description:
-      "Diamond AMC provides 4 PMS services, headlight restoration and express servicing lanes.",
-    includes: ["4 PMS Services", "Headlight Restoration", "Express Servicing"],
-  },
+{
+  slug: "platinum-amc",
+  category: "amc",
+  title: "Platinum AMC",
+  duration: "1.5 Years",
+  fixedPrice: 2999,
+  shortDesc: "Enhanced protection with extended service coverage.",
+  description:
+    "Platinum AMC provides extended 1.5-year coverage with three full service cycles, added brake disc cutting and superior maintenance benefits.",
+  includes: [
+    "3 PMS (Periodic Maintenance Services)",
+    "3 Wheel Alignments",
+    "3 Wheel Balancings",
+    "3 Tyre Rotations",
+    "3 AC Check-ups",
+    "3 Electrical Check-ups",
+    "3 Brake Check-ups",
+    "3 Wiper Washer Fluid Top-ups",
+    "3 Oil Filter Replacements",
+    "1 Brake Disc Cutting",
+  ],
+},
+
+{
+  slug: "diamond-amc",
+  category: "amc",
+  title: "Diamond AMC",
+  duration: "2 Years",
+  fixedPrice: 4999,
+  shortDesc: "Ultimate long-term care with maximum benefits.",
+  description:
+    "Diamond AMC is a premium two-year protection plan offering four full service cycles, headlight restoration and brake disc cutting for ultimate peace of mind.",
+  includes: [
+    "4 PMS (Periodic Maintenance Services)",
+    "4 Wheel Alignments",
+    "4 Wheel Balancings",
+    "4 Tyre Rotations",
+    "4 AC Check-ups",
+    "4 Electrical Check-ups",
+    "4 Brake Check-ups",
+    "4 Wiper Washer Fluid Top-ups",
+    "4 Oil Filter Replacements",
+    "2 Brake Disc Cutting",
+    "2 Headlight Restoration",
+  ],
+},
 
   // ---------------- MEMBERSHIP ----------------
   {
