@@ -3,6 +3,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { packages } from "@/app/data/packages";
+import Image from "next/image";
 
 /* ----------------------------------
    STATIC PARAMS FOR BUILD
@@ -36,6 +37,20 @@ export default async function OfferDetailPage({
       <div className="max-w-5xl mx-auto bg-white p-10 rounded-xl shadow">
         {/* TITLE */}
         <h1 className="text-4xl font-bold">{item.title}</h1>
+
+        {/* AMC PLAN POSTER */}
+        {item.category === "amc" && (
+          <div className="mt-8 rounded-xl overflow-hidden border">
+            <Image
+              src={`/amc/${item.slug.replace("-amc", "")}.png`}
+              alt={item.title}
+              width={1200}
+              height={1600}
+              className="w-full object-contain"
+              priority
+            />
+          </div>
+        )}
 
         {item.subtitle && (
           <p className="mt-2 text-gray-500 text-lg">{item.subtitle}</p>
