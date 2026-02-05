@@ -4,13 +4,9 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { packages } from "@/app/data/packages";
 
-// export const dynamic = "force-dynamic";
-
 /* ----------------------------------
-   REQUIRED FOR VERCEL STATIC BUILD
+   STATIC PARAMS FOR BUILD
 ----------------------------------- */
-
-// export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return packages.map((pkg) => ({
@@ -22,12 +18,14 @@ export async function generateStaticParams() {
    PAGE COMPONENT
 ----------------------------------- */
 
-export default function OfferDetailPage({
+export default async function OfferDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const item = packages.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+
+  const item = packages.find((p) => p.slug === slug);
 
   if (!item) {
     notFound();
