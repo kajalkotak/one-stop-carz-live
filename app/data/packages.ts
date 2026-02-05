@@ -144,37 +144,60 @@ export const packages: PackageItem[] = [
 },
 
   // ---------------- MEMBERSHIP ----------------
-  {
-    slug: "elite-care",
-    category: "membership",
-    title: "Elite Care",
-    duration: "3 Years",
-    fixedPrice: 499,
-    shortDesc: "Basic long-term membership benefits.",
-    description:
-      "Elite Care membership gives complimentary annual services and discount benefits.",
-    includes: [
-      "Complimentary Service Every Year",
-      "10% Discount on Services",
-      "Priority Support",
-    ],
-  },
 
-  {
-    slug: "advance-care",
-    category: "membership",
-    title: "Advance Care",
-    duration: "4 Years",
-    fixedPrice: 999,
-    shortDesc: "Premium membership with AMC discounts.",
-    description:
-      "Advance Care offers more complimentary benefits and 20% off on AMC plans.",
-    includes: [
-      "Complimentary Services",
-      "20% Discount on AMC",
-      "Priority Booking",
-    ],
-  },
+{
+  slug: "elite-care",
+  category: "membership",
+  title: "Elite Care Membership",
+  duration: "3 Years",
+  fixedPrice: 499,
+  shortDesc:
+    "Premium long-term membership with complimentary services and exclusive discounts.",
+  description:
+    "Elite Care Membership gives you 3 years of worry-free car ownership with complimentary yearly services and special savings on mechanical, detailing and AMC plans.",
+  includes: [
+    "General Check-up every year",
+    "AC Filter & Air Filter Cleaning",
+    "Brake Oil & Coolant Top-up",
+    "Denting & Painting Estimation",
+    "Insurance Guideline",
+    "Windshield Washer Replacement",
+    "10% Discount on Every Service",
+    "Exclusive Discounts on Ceramic / Teflon / Body Polish",
+    "Track Service History",
+    "Access Latest Offers",
+    "Manage Car Data",
+    "Discount on Labour Charges",
+  ],
+},
+
+{
+  slug: "advance-care",
+  category: "membership",
+  title: "Advance Care Membership",
+  duration: "4 Years",
+  fixedPrice: 999,
+  shortDesc:
+    "Ultimate long-term membership with higher complimentary value and AMC discounts.",
+  description:
+    "Advance Care Membership offers 4 years of premium protection with complimentary yearly services, 20% off on AMC purchase and ongoing savings on car care.",
+  includes: [
+    "General Check-up every year",
+    "AC Filter & Air Filter Cleaning",
+    "Brake Oil & Coolant Top-up",
+    "Denting & Painting Estimation",
+    "Insurance Guideline",
+    "Windshield Washer Replacement",
+    "Car Scanning",
+    "10% Discount on Every Service",
+    "20% OFF on AMC Purchase",
+    "Exclusive Discounts on Ceramic / Teflon / Body Polish",
+    "Track Service History",
+    "Access Latest Offers",
+    "Manage Car Data",
+    "Discount on Labour Charges",
+  ],
+},
 
   //  new ceramic coating package
 
