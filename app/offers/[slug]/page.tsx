@@ -42,7 +42,7 @@ export default async function OfferDetailPage({
         {item.category === "amc" && (
           <div className="mt-8 rounded-xl overflow-hidden border">
             <Image
-              src="/amc/DIAMOND.png"
+             src={`/amc/${item.slug.replace("-amc", "")}.png`}
               alt={item.title}
               width={1200}
               height={1600}
