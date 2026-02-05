@@ -4,17 +4,19 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { packages } from "@/app/data/packages";
 
+export const dynamic = "force-dynamic";
+
 /* ----------------------------------
    REQUIRED FOR VERCEL STATIC BUILD
 ----------------------------------- */
 
-export const dynamicParams = false;
+// export const dynamicParams = false;
 
-export async function generateStaticParams() {
-  return packages.map((pkg) => ({
-    slug: pkg.slug,
-  }));
-}
+// export async function generateStaticParams() {
+//   return packages.map((pkg) => ({
+//     slug: pkg.slug,
+//   }));
+// }
 
 /* ----------------------------------
    PAGE COMPONENT
