@@ -9,11 +9,17 @@ export interface PackageItem {
   category: PackageCategory;
   title: string;
   subtitle?: string;
+
   duration?: string;
 
-  petrolPrice?: number;
-  dieselPrice?: number;
-  fixedPrice?: number;
+  petrolActualPrice?: number;
+  petrolOfferPrice?: number;
+
+  dieselActualPrice?: number;
+  dieselOfferPrice?: number;
+
+  actualPrice?: number;
+  offerPrice?: number;
 
   vehicleTypes?: VehicleType[];
 
@@ -33,172 +39,193 @@ export const packages: PackageItem[] = [
     slug: "basic-package",
     category: "package",
     title: "Basic Package",
-    subtitle: "Complete preventive maintenance",
-    petrolPrice: 3999,
-    dieselPrice: 5499,
-    vehicleTypes: ["Hatchback", "Sedan", "SUV"],
-    shortDesc: "Essential maintenance package for smooth daily driving.",
+    subtitle: "Essential Car Care",
+    petrolActualPrice: 6000,
+    petrolOfferPrice: 3999,
+    dieselOfferPrice: 5499,
+    vehicleTypes: ["Hatchback", "Sedan", "SUV", "Luxury"],
+    shortDesc:
+      "Routine maintenance package to keep your petrol, CNG or diesel car healthy and efficient.",
     description:
-      "Includes PMS service, engine oil replacement, oil & air filter cleaning, AC check-up, scanning, suspension check and complimentary wash.",
+      "Give your car the essential care it deserves with our Basic Service Package. Designed for routine maintenance and preventive care to keep your vehicle performing at its best.",
     includes: [
-      "Preventive Maintenance Service (PMS)",
-      "Engine Oil Replacement",
-      "Oil Filter Cleaning",
-      "Air Filter Cleaning",
+      "PMS Check-up (Periodic Maintenance Service)",
+      "Engine Oil & Oil Filter Replacement",
+      "AC Filter & Air Filter Cleaning",
+      "Coolant, Brake Oil, Windshield Washer Top-Up",
+      "Throttle Body & Injector Cleaning",
+      "Car Scanning",
+      "Clutch Operation & Underbody Inspection",
+      "Suspension & Brake Check & Spark Plug Check",
+      "Electrical Check-Up",
       "AC Check-up",
-      "Scanning",
-      "Suspension Check",
-      "Complimentary Car Wash",
+      "Engine Tuning",
+      "Exterior Wash & Vacuum Cleaning",
+      "And Many More...",
     ],
   },
+
 
   {
     slug: "premium-package",
     category: "package",
     title: "Premium Package",
-    subtitle: "Advanced servicing & inspection",
-    petrolPrice: 5999,
+    subtitle: "Advanced Performance Care",
+    petrolActualPrice: 9000,
+    petrolOfferPrice: 5999,
     vehicleTypes: ["Hatchback", "Sedan", "SUV", "Luxury"],
-    shortDesc: "Advanced servicing with alignment and tyre rotation.",
+    shortDesc:
+      "Comprehensive service package delivering advanced maintenance, safety checks and premium car care.",
     description:
-      "Premium maintenance package including wheel alignment & balancing, tyre rotation, AC diagnostics and complete mechanical inspection.",
+      "Experience unmatched performance with our Premium Service Package — designed for petrol & CNG cars that demand top-level care and protection.",
     includes: [
-      "Preventive Maintenance Service",
-      "Wheel Alignment",
-      "Wheel Balancing",
-      "Tyre Rotation",
-      "AC Diagnostics",
-      "Complete Inspection",
+      "PMS Check-up (Periodic Maintenance Service)",
+      "Engine Oil & Oil Filter Replacement",
+      "AC Filter & Air Filter Replacement",
+      "Coolant, Brake Oil, Windshield Replacement",
+      "Wheel Alignment, Balancing & Tyre Rotation",
+      "Car Scanning",
+      "Throttle Body & Injector Cleaning",
+      "Clutch Operation & Underbody Inspection",
+      "Suspension & Brake Check & Spark Plug Check",
+      "Electrical Check-Up",
+      "AC Check-up",
+      "Engine Tuning",
+      "Exterior Wash & Vacuum Cleaning",
+      "And Many More...",
     ],
   },
+
 
   // ---------------- AMC ----------------
 
 {
-  slug: "gold-amc",
-  category: "amc",
-  title: "Gold AMC",
-  duration: "1 Year",
-  fixedPrice: 1999,
-  shortDesc: "Essential care package for worry-free car maintenance.",
-  description:
-    "Gold AMC is designed for cost-effective annual car care with two complete service cycles ensuring smooth performance throughout the year.",
-  includes: [
-    "2 PMS (Periodic Maintenance Services)",
-    "2 Wheel Alignments",
-    "2 Wheel Balancings",
-    "2 Tyre Rotations",
-    "2 AC Check-ups",
-    "2 Electrical Check-ups",
-    "2 Brake Check-ups",
-    "2 Wiper Washer Fluid Top-ups",
-    "2 Oil Filter Replacements",
-  ],
-},
+    slug: "gold-amc",
+    category: "amc",
+    title: "Gold AMC",
+    duration: "1 Year",
+    actualPrice: 5999,
+    offerPrice: 1999,
+    shortDesc: "Essential annual care plan for worry-free ownership.",
+    description:
+      "Gold AMC provides cost-effective annual coverage with two complete service cycles ensuring smooth performance.",
+    includes: [
+      "2 PMS Services",
+      "2 Wheel Alignments",
+      "2 Wheel Balancings",
+      "2 Tyre Rotations",
+      "2 AC Check-ups",
+      "2 Electrical Check-ups",
+      "2 Brake Check-ups",
+      "2 Wiper Washer Fluid Top-ups",
+      "2 Oil Filter Replacements",
+    ],
+  },
 
 {
-  slug: "platinum-amc",
-  category: "amc",
-  title: "Platinum AMC",
-  duration: "1.5 Years",
-  fixedPrice: 2999,
-  shortDesc: "Enhanced protection with extended service coverage.",
-  description:
-    "Platinum AMC provides extended 1.5-year coverage with three full service cycles, added brake disc cutting and superior maintenance benefits.",
-  includes: [
-    "3 PMS (Periodic Maintenance Services)",
-    "3 Wheel Alignments",
-    "3 Wheel Balancings",
-    "3 Tyre Rotations",
-    "3 AC Check-ups",
-    "3 Electrical Check-ups",
-    "3 Brake Check-ups",
-    "3 Wiper Washer Fluid Top-ups",
-    "3 Oil Filter Replacements",
-    "1 Brake Disc Cutting",
-  ],
-},
+    slug: "platinum-amc",
+    category: "amc",
+    title: "Platinum AMC",
+    duration: "1.5 Years",
+    actualPrice: 7999,
+    offerPrice: 2999,
+    shortDesc: "Extended protection with enhanced service benefits.",
+    description:
+      "Platinum AMC includes three full service cycles and brake disc cutting for superior maintenance.",
+    includes: [
+      "3 PMS Services",
+      "3 Wheel Alignments",
+      "3 Wheel Balancings",
+      "3 Tyre Rotations",
+      "3 AC Check-ups",
+      "3 Electrical Check-ups",
+      "3 Brake Check-ups",
+      "3 Wiper Washer Fluid Top-ups",
+      "3 Oil Filter Replacements",
+      "1 Brake Disc Cutting",
+    ],
+  },
 
 {
-  slug: "diamond-amc",
-  category: "amc",
-  title: "Diamond AMC",
-  duration: "2 Years",
-  fixedPrice: 4999,
-  shortDesc: "Ultimate long-term care with maximum benefits.",
-  description:
-    "Diamond AMC is a premium two-year protection plan offering four full service cycles, headlight restoration and brake disc cutting for ultimate peace of mind.",
-  includes: [
-    "4 PMS (Periodic Maintenance Services)",
-    "4 Wheel Alignments",
-    "4 Wheel Balancings",
-    "4 Tyre Rotations",
-    "4 AC Check-ups",
-    "4 Electrical Check-ups",
-    "4 Brake Check-ups",
-    "4 Wiper Washer Fluid Top-ups",
-    "4 Oil Filter Replacements",
-    "2 Brake Disc Cutting",
-    "2 Headlight Restoration",
-  ],
-},
+    slug: "diamond-amc",
+    category: "amc",
+    title: "Diamond AMC",
+    duration: "2 Years",
+    actualPrice: 11999,
+    offerPrice: 4999,
+    shortDesc: "Ultimate long-term protection plan.",
+    description:
+      "Diamond AMC offers four service cycles with brake disc cutting and headlight restoration.",
+    includes: [
+      "4 PMS Services",
+      "4 Wheel Alignments",
+      "4 Wheel Balancings",
+      "4 Tyre Rotations",
+      "4 AC Check-ups",
+      "4 Electrical Check-ups",
+      "4 Brake Check-ups",
+      "4 Wiper Washer Fluid Top-ups",
+      "4 Oil Filter Replacements",
+      "2 Brake Disc Cutting",
+      "2 Headlight Restoration",
+    ],
+  },
 
   // ---------------- MEMBERSHIP ----------------
 
 {
-  slug: "elite-care",
-  category: "membership",
-  title: "Elite Care Membership",
-  duration: "3 Years",
-  fixedPrice: 499,
-  shortDesc:
-    "Premium long-term membership with complimentary services and exclusive discounts.",
-  description:
-    "Elite Care Membership gives you 3 years of worry-free car ownership with complimentary yearly services and special savings on mechanical, detailing and AMC plans.",
-  includes: [
-    "General Check-up every year",
-    "AC Filter & Air Filter Cleaning",
-    "Brake Oil & Coolant Top-up",
-    "Denting & Painting Estimation",
-    "Insurance Guideline",
-    "Windshield Washer Replacement",
-    "10% Discount on Every Service",
-    "Exclusive Discounts on Ceramic / Teflon / Body Polish",
-    "Track Service History",
-    "Access Latest Offers",
-    "Manage Car Data",
-    "Discount on Labour Charges",
-  ],
-},
+    slug: "elite-care",
+    category: "membership",
+    title: "Elite Care Membership",
+    duration: "3 Years",
+    actualPrice: 2999,
+    offerPrice: 499,
+    shortDesc: "Affordable long-term membership with complimentary benefits.",
+    description:
+      "Elite Care Membership gives yearly complimentary services and exclusive savings across services and detailing.",
+    includes: [
+      "General Check-up every year",
+      "AC Filter & Air Filter Cleaning",
+      "Brake Oil & Coolant Top-up",
+      "Denting & Painting Estimation",
+      "Insurance Guideline",
+      "Windshield Washer Replacement",
+      "10% Discount on Every Service",
+      "Exclusive Discounts on Ceramic / Teflon / Body Polish",
+      "Track Service History",
+      "Access Latest Offers",
+      "Manage Car Data",
+      "Discount on Labour Charges",
+    ],
+  },
 
 {
-  slug: "advance-care",
-  category: "membership",
-  title: "Advance Care Membership",
-  duration: "4 Years",
-  fixedPrice: 999,
-  shortDesc:
-    "Ultimate long-term membership with higher complimentary value and AMC discounts.",
-  description:
-    "Advance Care Membership offers 4 years of premium protection with complimentary yearly services, 20% off on AMC purchase and ongoing savings on car care.",
-  includes: [
-    "General Check-up every year",
-    "AC Filter & Air Filter Cleaning",
-    "Brake Oil & Coolant Top-up",
-    "Denting & Painting Estimation",
-    "Insurance Guideline",
-    "Windshield Washer Replacement",
-    "Car Scanning",
-    "10% Discount on Every Service",
-    "20% OFF on AMC Purchase",
-    "Exclusive Discounts on Ceramic / Teflon / Body Polish",
-    "Track Service History",
-    "Access Latest Offers",
-    "Manage Car Data",
-    "Discount on Labour Charges",
-  ],
-},
-
+    slug: "advance-care",
+    category: "membership",
+    title: "Advance Care Membership",
+    duration: "4 Years",
+    actualPrice: 4999,
+    offerPrice: 999,
+    shortDesc: "Premium membership with AMC discounts and extra savings.",
+    description:
+      "Advance Care Membership offers higher complimentary value, AMC discounts and premium ownership perks.",
+    includes: [
+      "General Check-up every year",
+      "AC Filter & Air Filter Cleaning",
+      "Brake Oil & Coolant Top-up",
+      "Denting & Painting Estimation",
+      "Insurance Guideline",
+      "Windshield Washer Replacement",
+      "Car Scanning",
+      "10% Discount on Every Service",
+      "20% OFF on AMC Purchase",
+      "Exclusive Discounts on Ceramic / Teflon / Body Polish",
+      "Track Service History",
+      "Access Latest Offers",
+      "Manage Car Data",
+      "Discount on Labour Charges",
+    ],
+  },
   //  new ceramic coating package
 
   {
