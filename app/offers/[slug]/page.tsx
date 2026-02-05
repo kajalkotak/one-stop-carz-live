@@ -52,6 +52,30 @@ export default async function OfferDetailPage({
           </div>
         )}
 
+        {item.category === "membership" && (
+          <Image
+            src={`/membership/${item.slug}.png`}
+            alt={item.title}
+            width={1200}
+            height={1600}
+            className="w-full object-contain mb-10"
+            priority
+          />
+        )}
+
+        {item.category === "package" &&
+          item.slug !== "basic-package" &&
+          item.slug !== "premium-package" && (
+            <Image
+              src={`/packages/${item.slug}.png`}
+              alt={item.title}
+              width={1200}
+              height={1600}
+              className="w-full object-contain mb-10"
+              priority
+            />
+          )}
+
         {item.subtitle && (
           <p className="mt-2 text-gray-500 text-lg">{item.subtitle}</p>
         )}
