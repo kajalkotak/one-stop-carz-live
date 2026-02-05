@@ -285,7 +285,7 @@ export default function Home() {
           </p>
 
           {/* STATS GRID */}
-          <div className="mt-14 grid md:grid-cols-3 gap-10">
+          <div className="mt-14 grid md:grid-cols-2 gap-10">
             {[
               { label: "Years Experience", number: 9, suffix: "+" },
               { label: "Cars Serviced", number: 20000, suffix: "+" },
