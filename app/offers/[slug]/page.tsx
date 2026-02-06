@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-// import Image from "next/image";
+import Image from "next/image";
 import { packages } from "@/app/data/packages";
 
 /* ----------------------------------
@@ -17,7 +17,7 @@ export async function generateStaticParams() {
    PAGE
 ----------------------------------- */
 
-export default async function OfferDetailPage({
+export default function OfferDetailPage({
   params,
 }: {
   params: { slug: string };
@@ -60,16 +60,17 @@ export default async function OfferDetailPage({
 
         {/* IMAGE */}
         {poster && (
-  <div className="my-10">
-    <img
-      src={poster}
-      alt={item.title}
-      className="w-full rounded-xl object-contain"
-      loading="eager"
-    />
-  </div>
-)}
-
+          <div className="my-10">
+            <Image
+              src={poster}
+              alt={item.title}
+              width={1200}
+              height={1600}
+              className="w-full rounded-xl object-contain"
+              priority
+            />
+          </div>
+        )}
 
         {/* SHORT DESC */}
         <p className="mt-4 text-gray-700">{item.shortDesc}</p>
