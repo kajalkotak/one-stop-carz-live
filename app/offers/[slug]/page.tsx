@@ -31,20 +31,9 @@ export default async function OfferDetailPage({
   }
 
   function getPosterPath() {
-    if (item.category === "amc") {
-      return `/amc/${item.slug.replace("-amc", "").toUpperCase()}.png`;
-    }
+  return `/${item.category}/${item.slug}.png`;
+}
 
-    if (item.category === "membership") {
-      return `/membership/${item.slug}.png`;
-    }
-
-    if (item.category === "package") {
-      return `/packages/${item.slug}.png`;
-    }
-
-    return null;
-  }
 
   const poster = getPosterPath();
 
