@@ -51,7 +51,6 @@ export default async function OfferDetailPage({
   return (
     <main className="min-h-screen bg-gray-50 px-6 py-20">
       <div className="max-w-5xl mx-auto bg-white p-10 rounded-xl shadow">
-
         {/* TITLE */}
         <h1 className="text-4xl font-bold">{item.title}</h1>
 
@@ -78,7 +77,6 @@ export default async function OfferDetailPage({
 
         {/* PRICE */}
         <div className="mt-8 border rounded-lg p-6 bg-gray-50">
-
           {item.actualPrice && (
             <>
               <p className="text-sm line-through text-gray-400">
@@ -159,7 +157,6 @@ export default async function OfferDetailPage({
             Back to Offers
           </Link>
         </div>
-
       </div>
     </main>
   );
