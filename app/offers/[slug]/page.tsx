@@ -17,18 +17,22 @@ export async function generateStaticParams() {
    PAGE
 ----------------------------------- */
 
-export default function OfferDetailPage({
+export default async function OfferDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const item = packages.find((p) => p.slug === params.slug);
+  const { slug } = await params;
 
-  if (!item) {
+  const found = packages.find((p) => p.slug === slug);
+
+  if (!found) {
     notFound();
   }
 
-  const getPosterPath = () => {
+  const item = found;
+
+  function getPosterPath() {
     if (item.category === "amc") {
       return `/amc/${item.slug.replace("-amc", "").toUpperCase()}.png`;
     }
@@ -42,7 +46,7 @@ export default function OfferDetailPage({
     }
 
     return null;
-  };
+  }
 
   const poster = getPosterPath();
 
@@ -55,7 +59,6 @@ export default function OfferDetailPage({
           <p className="mt-2 text-gray-500 text-lg">{item.subtitle}</p>
         )}
 
-        {/* IMAGE */}
         {poster && (
           <div className="my-10">
             <Image
@@ -71,7 +74,6 @@ export default function OfferDetailPage({
 
         <p className="mt-4 text-gray-700">{item.shortDesc}</p>
 
-        {/* PRICE */}
         <div className="mt-8 border rounded-lg p-6 bg-gray-50">
           {item.actualPrice && (
             <>
@@ -94,6 +96,7 @@ export default function OfferDetailPage({
                   Petrol: ₹{item.petrolActualPrice}
                 </p>
               )}
+
               <p className="text-xl font-semibold text-red-600">
                 Petrol: ₹{item.petrolOfferPrice}
               </p>
@@ -107,6 +110,7 @@ export default function OfferDetailPage({
                   Diesel: ₹{item.dieselActualPrice}
                 </p>
               )}
+
               <p className="text-xl font-semibold text-red-600">
                 Diesel: ₹{item.dieselOfferPrice}
               </p>
@@ -120,13 +124,11 @@ export default function OfferDetailPage({
           )}
         </div>
 
-        {/* DESCRIPTION */}
         <div className="mt-10">
           <h2 className="text-2xl font-semibold">Package Details</h2>
           <p className="mt-3 text-gray-700">{item.description}</p>
         </div>
 
-        {/* INCLUDES */}
         <div className="mt-8">
           <h3 className="text-xl font-semibold">What’s Included</h3>
 
@@ -137,7 +139,6 @@ export default function OfferDetailPage({
           </ul>
         </div>
 
-        {/* CTA */}
         <div className="mt-10 flex gap-4 flex-wrap">
           <Link
             href={`/booking?service=${encodeURIComponent(item.title)}`}

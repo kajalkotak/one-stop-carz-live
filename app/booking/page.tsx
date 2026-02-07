@@ -1,8 +1,6 @@
-// app/booking/page.tsx
-
 "use client";
 
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { packages } from "@/app/data/packages";
 
@@ -21,14 +19,15 @@ const TIME_SLOTS = [
 
 const VEHICLE_TYPES = ["Hatchback", "Sedan", "SUV", "Luxury"];
 
-// 🔴 CHANGE TO REAL BUSINESS NUMBER (NO +, NO SPACES)
-const OWNER_WHATSAPP = "+918460692482";
+// 🔴 BUSINESS NUMBER — NO + NO SPACES
+const OWNER_WHATSAPP = "918460692482";
 
-/* ---------------- INNER FORM ---------------- */
+/* ---------------- FORM ---------------- */
 
 function BookingForm() {
   const searchParams = useSearchParams();
-  const serviceFromUrl = searchParams.get("service") || "";
+
+  const serviceFromUrl = searchParams.get("service") ?? "";
 
   const [formData, setFormData] = useState({
     branch: "One Stop Carz – Vadodara",
@@ -43,41 +42,31 @@ function BookingForm() {
     address: "",
   });
 
-  useEffect(() => {
-  if (!serviceFromUrl) return;
-
-  setFormData((prev) => {
-    if (prev.service === serviceFromUrl) return prev;
-
-    return {
-      ...prev,
-      service: serviceFromUrl,
-    };
-  });
-}, [serviceFromUrl]);
-
-
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
     >,
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     const message = `
-📅 New Booking Request – One Stop Carz
+📅 New Booking – One Stop Carz
 
 👤 Name: ${formData.name}
 📞 Mobile: ${formData.mobile}
 
-🚘 Car Reg: ${formData.carReg}
-🚗 Car Model: ${formData.carModel}
-🛻 Vehicle Type: ${formData.vehicleType}
+🚘 Reg: ${formData.carReg}
+🚗 Model: ${formData.carModel}
+🛻 Type: ${formData.vehicleType}
 
 🛠 Service: ${formData.service}
 
@@ -88,18 +77,14 @@ function BookingForm() {
 ${formData.address}
 `;
 
-    const encodedMessage = encodeURIComponent(message);
+    const encoded = encodeURIComponent(message);
 
-    window.open(
-      `https://wa.me/${OWNER_WHATSAPP}?text=${encodedMessage}`,
-      "_blank",
-    );
+    window.open(`https://wa.me/${OWNER_WHATSAPP}?text=${encoded}`, "_blank");
   };
 
   return (
     <main className="min-h-screen bg-gray-50 px-6 py-20">
       <div className="max-w-4xl mx-auto bg-white p-10 rounded-xl shadow">
-        {/* HEADER */}
         <h1 className="text-4xl font-bold text-center">
           Book <span className="text-red-600">Your Appointment</span>
         </h1>
@@ -108,12 +93,10 @@ ${formData.address}
           Fill all required details to confirm your booking.
         </p>
 
-        {/* FORM */}
         <form
           onSubmit={handleSubmit}
           className="mt-12 grid md:grid-cols-2 gap-6"
         >
-          {/* BRANCH */}
           <div>
             <label className="block text-sm font-medium mb-1">Branch</label>
             <input
@@ -123,7 +106,6 @@ ${formData.address}
             />
           </div>
 
-          {/* NAME */}
           <div>
             <label className="block text-sm font-medium mb-1">
               Full Name *
@@ -137,11 +119,8 @@ ${formData.address}
             />
           </div>
 
-          {/* MOBILE */}
           <div>
-            <label className="block text-sm font-medium mb-1">
-              Mobile Number *
-            </label>
+            <label className="block text-sm font-medium mb-1">Mobile *</label>
             <input
               required
               name="mobile"
@@ -151,10 +130,9 @@ ${formData.address}
             />
           </div>
 
-          {/* CAR REG */}
           <div>
             <label className="block text-sm font-medium mb-1">
-              Car Registration *
+              Registration *
             </label>
             <input
               required
@@ -165,7 +143,6 @@ ${formData.address}
             />
           </div>
 
-          {/* CAR MODEL */}
           <div>
             <label className="block text-sm font-medium mb-1">
               Car Model *
@@ -175,12 +152,10 @@ ${formData.address}
               name="carModel"
               value={formData.carModel}
               onChange={handleChange}
-              placeholder="Eg: Honda City"
               className="w-full border rounded-md px-4 py-2"
             />
           </div>
 
-          {/* VEHICLE TYPE */}
           <div>
             <label className="block text-sm font-medium mb-1">
               Vehicle Type *
@@ -192,7 +167,7 @@ ${formData.address}
               onChange={handleChange}
               className="w-full border rounded-md px-4 py-2"
             >
-              <option value="">Select Type</option>
+              <option value="">Select</option>
               {VEHICLE_TYPES.map((v) => (
                 <option key={v} value={v}>
                   {v}
@@ -201,11 +176,8 @@ ${formData.address}
             </select>
           </div>
 
-          {/* SERVICE */}
           <div>
-            <label className="block text-sm font-medium mb-1">
-              Service / Package *
-            </label>
+            <label className="block text-sm font-medium mb-1">Service *</label>
             <select
               required
               name="service"
@@ -213,25 +185,21 @@ ${formData.address}
               onChange={handleChange}
               className="w-full border rounded-md px-4 py-2"
             >
-              <option value="">Select Service</option>
+              <option value="">Select</option>
 
               {packages.map((pkg) => (
                 <option key={pkg.slug} value={pkg.title}>
                   {pkg.title}
-                  {pkg.duration ? ` (${pkg.duration})` : ""}
                 </option>
               ))}
             </select>
           </div>
 
-          {/* DATE */}
           <div>
-            <label className="block text-sm font-medium mb-1">
-              Preferred Date *
-            </label>
+            <label className="block text-sm font-medium mb-1">Date *</label>
             <input
-              required
               type="date"
+              required
               name="date"
               value={formData.date}
               onChange={handleChange}
@@ -239,7 +207,6 @@ ${formData.address}
             />
           </div>
 
-          {/* SLOT */}
           <div>
             <label className="block text-sm font-medium mb-1">
               Time Slot *
@@ -251,7 +218,7 @@ ${formData.address}
               onChange={handleChange}
               className="w-full border rounded-md px-4 py-2"
             >
-              <option value="">Select Slot</option>
+              <option value="">Select</option>
               {TIME_SLOTS.map((s) => (
                 <option key={s} value={s}>
                   {s}
@@ -260,20 +227,18 @@ ${formData.address}
             </select>
           </div>
 
-          {/* ADDRESS */}
           <div className="md:col-span-2">
             <label className="block text-sm font-medium mb-1">Address *</label>
             <textarea
               required
+              rows={3}
               name="address"
               value={formData.address}
               onChange={handleChange}
-              rows={3}
               className="w-full border rounded-md px-4 py-2"
             />
           </div>
 
-          {/* SUBMIT */}
           <div className="md:col-span-2">
             <button
               type="submit"
@@ -288,7 +253,7 @@ ${formData.address}
   );
 }
 
-/* ---------------- PAGE WRAPPER ---------------- */
+/* ---------------- PAGE ---------------- */
 
 export default function BookingPage() {
   return (
