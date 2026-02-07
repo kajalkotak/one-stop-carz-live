@@ -44,13 +44,18 @@ function BookingForm() {
   });
 
   useEffect(() => {
-    if (serviceFromUrl) {
-      setFormData((prev) => ({
-        ...prev,
-        service: serviceFromUrl,
-      }));
-    }
-  }, [serviceFromUrl]);
+  if (!serviceFromUrl) return;
+
+  setFormData((prev) => {
+    if (prev.service === serviceFromUrl) return prev;
+
+    return {
+      ...prev,
+      service: serviceFromUrl,
+    };
+  });
+}, [serviceFromUrl]);
+
 
   const handleChange = (
     e: React.ChangeEvent<
