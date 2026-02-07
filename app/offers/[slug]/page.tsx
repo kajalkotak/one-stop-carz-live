@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { packages } from "@/app/data/packages";
 
-/* ----------------------------
+/* ----------------------------------
    STATIC PARAMS
------------------------------ */
+----------------------------------- */
 
 export async function generateStaticParams() {
   return packages.map((pkg) => ({
@@ -13,9 +13,9 @@ export async function generateStaticParams() {
   }));
 }
 
-/* ----------------------------
+/* ----------------------------------
    PAGE
------------------------------ */
+----------------------------------- */
 
 export default async function OfferDetailPage({
   params,
@@ -30,17 +30,21 @@ export default async function OfferDetailPage({
     notFound();
   }
 
+  // ✅ AFTER notFound(), TS knows item exists
+  const category = item.category;
+  const itemSlug = item.slug;
+
   function getPosterPath() {
-    if (item.category === "amc") {
-      return `/amc/${item.slug.replace("-amc", "").toUpperCase()}.png`;
+    if (category === "amc") {
+      return `/amc/${itemSlug.replace("-amc", "").toUpperCase()}.png`;
     }
 
-    if (item.category === "membership") {
-      return `/membership/${item.slug}.png`;
+    if (category === "membership") {
+      return `/membership/${itemSlug}.png`;
     }
 
-    if (item.category === "package") {
-      return `/packages/${item.slug}.png`;
+    if (category === "package") {
+      return `/packages/${itemSlug}.png`;
     }
 
     return null;
@@ -51,12 +55,14 @@ export default async function OfferDetailPage({
   return (
     <main className="min-h-screen bg-gray-50 px-6 py-20">
       <div className="max-w-5xl mx-auto bg-white p-10 rounded-xl shadow">
+        {/* TITLE */}
         <h1 className="text-4xl font-bold">{item.title}</h1>
 
         {item.subtitle && (
           <p className="mt-2 text-gray-500 text-lg">{item.subtitle}</p>
         )}
 
+        {/* IMAGE */}
         {poster && (
           <div className="my-10">
             <Image
@@ -70,8 +76,10 @@ export default async function OfferDetailPage({
           </div>
         )}
 
+        {/* SHORT DESC */}
         <p className="mt-4 text-gray-700">{item.shortDesc}</p>
 
+        {/* PRICE */}
         <div className="mt-8 border rounded-lg p-6 bg-gray-50">
           {item.actualPrice && (
             <>
@@ -120,11 +128,13 @@ export default async function OfferDetailPage({
           )}
         </div>
 
+        {/* DESCRIPTION */}
         <div className="mt-10">
           <h2 className="text-2xl font-semibold">Package Details</h2>
           <p className="mt-3 text-gray-700">{item.description}</p>
         </div>
 
+        {/* INCLUDES */}
         <div className="mt-8">
           <h3 className="text-xl font-semibold">What’s Included</h3>
 
@@ -135,6 +145,7 @@ export default async function OfferDetailPage({
           </ul>
         </div>
 
+        {/* CTA */}
         <div className="mt-10 flex gap-4 flex-wrap">
           <Link
             href={`/booking?service=${encodeURIComponent(item.title)}`}
