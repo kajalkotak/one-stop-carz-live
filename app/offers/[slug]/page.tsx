@@ -17,45 +17,38 @@ export async function generateStaticParams() {
    PAGE
 ----------------------------------- */
 
-export default async function OfferDetailPage({
+export default function OfferDetailPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }) {
-  const { slug } = await params;
-
-  const item = packages.find((p) => p.slug === slug);
+  const item = packages.find((p) => p.slug === params.slug);
 
   if (!item) {
     notFound();
   }
 
-  // ✅ AFTER notFound(), TS knows item exists
-  const category = item.category;
-  const itemSlug = item.slug;
-
-  function getPosterPath() {
-    if (category === "amc") {
-      return `/amc/${itemSlug.replace("-amc", "").toUpperCase()}.png`;
+  const getPosterPath = () => {
+    if (item.category === "amc") {
+      return `/amc/${item.slug.replace("-amc", "").toUpperCase()}.png`;
     }
 
-    if (category === "membership") {
-      return `/membership/${itemSlug}.png`;
+    if (item.category === "membership") {
+      return `/membership/${item.slug}.png`;
     }
 
-    if (category === "package") {
-      return `/packages/${itemSlug}.png`;
+    if (item.category === "package") {
+      return `/packages/${item.slug}.png`;
     }
 
     return null;
-  }
+  };
 
   const poster = getPosterPath();
 
   return (
     <main className="min-h-screen bg-gray-50 px-6 py-20">
       <div className="max-w-5xl mx-auto bg-white p-10 rounded-xl shadow">
-        {/* TITLE */}
         <h1 className="text-4xl font-bold">{item.title}</h1>
 
         {item.subtitle && (
@@ -76,7 +69,6 @@ export default async function OfferDetailPage({
           </div>
         )}
 
-        {/* SHORT DESC */}
         <p className="mt-4 text-gray-700">{item.shortDesc}</p>
 
         {/* PRICE */}
