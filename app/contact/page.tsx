@@ -4,8 +4,8 @@
 
 import Link from "next/link";
 
-const PHONE_NUMBER = "+91 9904132222";
-const WHATSAPP_NUMBER = "919904132222";
+const PHONE_NUMBER = "+91 8460692482";
+const WHATSAPP_NUMBER = "8460692482";
 
 export default function ContactPage() {
   return (
