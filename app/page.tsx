@@ -6,7 +6,8 @@ import Link from "next/link";
 import { packages } from "@/app/data/packages";
 import Counter from "./components/Counter";
 import LimitedOfferPopup from "@/app/components/LimitedOfferPopup";
-import {services} from "@/app/data/services";
+import { services } from "@/app/data/services";
+import GoogleReviews from "./components/GoogleReviews";
 
 export default function Home() {
   return (
@@ -41,16 +42,16 @@ export default function Home() {
           className="mt-10 flex justify-center gap-6 flex-wrap"
         >
           <Link href="/booking">
-    <button className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-lg text-lg font-semibold shadow-lg">
-      Book Service
-    </button>
-  </Link>
+            <button className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-lg text-lg font-semibold shadow-lg">
+              Book Service
+            </button>
+          </Link>
 
-  <Link href="/offers">
-    <button className="border border-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-black transition">
-      View Offers
-    </button>
-  </Link>
+          <Link href="/offers">
+            <button className="border border-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-black transition">
+              View Offers
+            </button>
+          </Link>
         </motion.div>
       </section>
 
@@ -68,34 +69,31 @@ export default function Home() {
 
           {/* SERVICES GRID */}
           <div className="mt-12 grid md:grid-cols-4 gap-6">
-  {services.slice(0, 4).map((service) => (
-    <motion.div
-      key={service.slug}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true }}
-      className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col"
-    >
-      <h3 className="text-xl font-semibold">
-        {service.title}
-      </h3>
+            {services.slice(0, 4).map((service) => (
+              <motion.div
+                key={service.slug}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col"
+              >
+                <h3 className="text-xl font-semibold">{service.title}</h3>
 
-      <p className="mt-2 text-gray-600 flex-grow">
-        {service.shortDesc}
-      </p>
+                <p className="mt-2 text-gray-600 flex-grow">
+                  {service.shortDesc}
+                </p>
 
-      {/* BUTTON */}
-      <Link
-        href={`/services/${service.slug}`}
-        className="mt-4 inline-block text-center bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md font-semibold"
-      >
-        View Details
-      </Link>
-    </motion.div>
-  ))}
-</div>
-
+                {/* BUTTON */}
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="mt-4 inline-block text-center bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md font-semibold"
+                >
+                  View Details
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -289,7 +287,6 @@ export default function Home() {
             {[
               { label: "Years Experience", number: 9, suffix: "+" },
               { label: "Cars Serviced", number: 20000, suffix: "+" },
-              
             ].map((stat) => (
               <motion.div
                 key={stat.label}
@@ -307,6 +304,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <GoogleReviews />
     </main>
   );
 }

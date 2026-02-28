@@ -16,8 +16,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto  px-6 grid md:grid-cols-4 gap-8 ">
         {/* brand */}
         <div>
-          <h3 className="text-l font-bold text-white">One Stop Carz</h3>
-          <p className="mt-3 text-xl">
+          <h3 className="text-3xl font-bold text-white">One Stop Carz</h3>
+          <h4 className="text-xl font-semibold text-red-500 mt-3">
+            Multi Brand Car Workshop
+          </h4>
+          <p className="mt-3 text-xl text-gray-400">
             Complete car care solutions – servicing, detailing, insurance claims
             and maintenance packages in one place.
           </p>
@@ -53,11 +56,10 @@ export default function Footer() {
             Call us or book your service online instantly.
           </p>
           <Link href="/booking">
-  <button className="bg-red-600 hover:bg-red-700 px-5 py-2 rounded-md text-white font-semibold">
-    Book Service
-  </button>
-</Link>
-
+            <button className="bg-red-600 hover:bg-red-700 px-5 py-2 rounded-md text-white font-semibold">
+              Book Service
+            </button>
+          </Link>
         </div>
       </div>
 
