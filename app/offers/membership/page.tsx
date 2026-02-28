@@ -31,17 +31,17 @@ export default function MembershipPage() {
 
               {/* PRICE */}
               <div className="mt-4">
-                {plan.actualPrice && (
+                {/* {plan.actualPrice && (
                   <p className="text-sm line-through text-gray-400">
                     ₹{plan.actualPrice}
                   </p>
-                )}
+                )} */}
 
-                {plan.offerPrice && (
+                {/* {plan.offerPrice && (
                   <p className="text-2xl font-bold text-red-600">
                     ₹{plan.offerPrice}
                   </p>
-                )}
+                )} */}
 
                 {plan.duration && (
                   <p className="mt-1 text-sm text-gray-500">

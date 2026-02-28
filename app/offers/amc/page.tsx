@@ -33,7 +33,7 @@ export default function AmcPage() {
 
               {/* PRICE + DURATION */}
               <div className="mt-4">
-                {plan.actualPrice && (
+                {/* {plan.actualPrice && (
                   <p className="text-sm line-through text-gray-400">
                     ₹{plan.actualPrice}
                   </p>
@@ -43,7 +43,7 @@ export default function AmcPage() {
                   <p className="text-2xl font-bold text-red-600">
                     ₹{plan.offerPrice}
                   </p>
-                )}
+                )} */}
 
                 {plan.duration && (
                   <p className="mt-1 text-sm text-gray-500">

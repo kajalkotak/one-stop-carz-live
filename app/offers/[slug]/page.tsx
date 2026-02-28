@@ -74,8 +74,8 @@ export default async function OfferDetailPage({
 
         <p className="mt-4 text-gray-700">{item.shortDesc}</p>
 
-        <div className="mt-8 border rounded-lg p-6 bg-gray-50">
-          {item.actualPrice && (
+        {/* <div className="mt-8 border rounded-lg p-6 bg-gray-50"> */}
+        {/* {item.actualPrice && (
             <>
               <p className="text-sm line-through text-gray-400">
                 ₹{item.actualPrice}
@@ -87,9 +87,9 @@ export default async function OfferDetailPage({
                 </p>
               )}
             </>
-          )}
+          )} */}
 
-          {item.petrolOfferPrice && (
+        {/* {item.petrolOfferPrice && (
             <div className="mt-4">
               {item.petrolActualPrice && (
                 <p className="text-sm line-through text-gray-400">
@@ -101,9 +101,9 @@ export default async function OfferDetailPage({
                 Petrol: ₹{item.petrolOfferPrice}
               </p>
             </div>
-          )}
+          )} */}
 
-          {item.dieselOfferPrice && (
+        {/* {item.dieselOfferPrice && (
             <div className="mt-2">
               {item.dieselActualPrice && (
                 <p className="text-sm line-through text-gray-400">
@@ -115,14 +115,14 @@ export default async function OfferDetailPage({
                 Diesel: ₹{item.dieselOfferPrice}
               </p>
             </div>
-          )}
+          )} */}
 
-          {item.duration && (
-            <p className="mt-3 text-sm text-gray-600">
-              Duration: {item.duration}
-            </p>
-          )}
-        </div>
+        {item.duration && (
+          <p className="mt-3 text-sm text-gray-600">
+            Duration: {item.duration}
+          </p>
+        )}
+        {/* </div> */}
 
         <div className="mt-10">
           <h2 className="text-2xl font-semibold">Package Details</h2>
