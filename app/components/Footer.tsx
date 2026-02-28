@@ -42,8 +42,8 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-white mb-3">Contact</h4>
           <p className="text-l">
-            📍 Plot no 9, Premvati Circle, opp. Welcare Hospital, Atladara,
-            Vadodara, Gujarat 390010
+            📍 Premvati Circle, opp. Welcare Hospital, Atladara, Vadodara,
+            Gujarat 390010
           </p>
           <p className="text-l mt-2">📞 Booking Desk: +91 94298 05368</p>
           <p className="text-l">📞 Manager: +91 94298 05368</p>
