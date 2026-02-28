@@ -270,6 +270,8 @@ export default function Home() {
         </div>
       </section>
 
+      <GoogleReviews />
+
       {/* STATS SECTION */}
       <section className="bg-black py-24 px-6 text-white">
         <div className="max-w-7xl mx-auto text-center">
@@ -304,8 +306,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <GoogleReviews />
     </main>
   );
 }

@@ -1,18 +1,33 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const PLACE_ID = "0x395fc43252af5323:0x9daf711200df1d6c";
+  try {
+    const PLACE_ID = "ChIJI1OvUjLEXzkRbB3fABJxr50";
 
-  const API_KEY = "AIzaSyDfzQTYqlDRiuLwPHC44K43TyUv-4-1ZbQ";
+    const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
 
-  const res = await fetch(
-    `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews&key=${API_KEY}`,
-  );
+    const res = await fetch(
+      `https://places.googleapis.com/v1/places/${PLACE_ID}`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "X-Goog-Api-Key": API_KEY!,
 
-  const data = await res.json();
+          // ⭐ VERY IMPORTANT — include all review fields
+         "X-Goog-FieldMask":
+  "reviews.rating,reviews.text,reviews.authorAttribution,reviews.relativePublishTimeDescription"
+        },
+      },
+    );
 
-  const fiveStarReviews =
-    data.result?.reviews?.filter((review: any) => review.rating === 5) || [];
+    const data = await res.json();
 
-  return NextResponse.json(fiveStarReviews);
+    console.log("GOOGLE RESPONSE:", JSON.stringify(data, null, 2));
+
+    return NextResponse.json(data.reviews || []);
+  } catch (error) {
+    console.log("ERROR:", error);
+
+    return NextResponse.json([]);
+  }
 }
