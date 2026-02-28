@@ -186,8 +186,8 @@ export default function Home() {
               },
               {
                 step: "04",
-                title: "Visit Workshop",
-                desc: "Arrive at the workshop or request pickup service.",
+                title: "Delivery",
+                desc: "We deliver your car back to your doorstep after service completion.",
               },
             ].map((item) => (
               <motion.div
