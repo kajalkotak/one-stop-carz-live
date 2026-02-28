@@ -23,19 +23,33 @@ export default function ContactPage() {
 
         {/* GRID */}
         <div className="mt-14 grid md:grid-cols-3 gap-8">
-          {/* PHONE */}
+          {/* CONTACT NUMBERS */}
           <div className="bg-white p-8 rounded-xl shadow text-center">
-            <h3 className="text-xl font-semibold">Call Us</h3>
-            <p className="mt-2 text-gray-600">{PHONE_NUMBER}</p>
+            <h3 className="text-xl font-semibold">Contact</h3>
 
-            <a
-              href={`tel:${PHONE_NUMBER}`}
-              className="inline-block mt-4 bg-red-600 text-white px-5 py-2 rounded-md font-semibold"
-            >
-              Call Now
-            </a>
+            <div className="mt-4 space-y-3 text-gray-600">
+              <p>
+                <span className="font-semibold">Booking : </span>
+                <a href="tel:8460692482" className="text-red-600 font-semibold">
+                  8460692482
+                </a>
+              </p>
+
+              <p>
+                <span className="font-semibold">Workshop Manager : </span>
+                <a href="tel:9624702102" className="text-red-600 font-semibold">
+                  9624702102
+                </a>
+              </p>
+
+              <p>
+                <span className="font-semibold">Bodyshop Manager : </span>
+                <a href="tel:9624702104" className="text-red-600 font-semibold">
+                  9624702104
+                </a>
+              </p>
+            </div>
           </div>
-
           {/* WHATSAPP */}
           <div className="bg-white p-8 rounded-xl shadow text-center">
             <h3 className="text-xl font-semibold">WhatsApp</h3>
@@ -57,12 +71,11 @@ export default function ContactPage() {
           <div className="bg-white p-8 rounded-xl shadow text-center">
             <h3 className="text-xl font-semibold">Visit Us</h3>
             <p className="mt-2 text-gray-600">
-              Premvati Circle,  
-            
+              Premvati Circle,
               <br />
               opp. Welcare Hospital,
               <br />
-             Atladara, Vadodara,Gujarat 390010
+              Atladara, Vadodara,Gujarat 390010
             </p>
           </div>
         </div>
