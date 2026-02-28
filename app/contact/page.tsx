@@ -57,11 +57,12 @@ export default function ContactPage() {
           <div className="bg-white p-8 rounded-xl shadow text-center">
             <h3 className="text-xl font-semibold">Visit Us</h3>
             <p className="mt-2 text-gray-600">
-              Opp. Welcare Hospital,
+              Premvati Circle,  
+            
               <br />
-              Nr. Premvati Circle,
+              opp. Welcare Hospital,
               <br />
-              Atladara, Vadodara
+             Atladara, Vadodara,Gujarat 390010
             </p>
           </div>
         </div>
