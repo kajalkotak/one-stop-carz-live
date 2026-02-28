@@ -22,9 +22,9 @@ export default function Footer() {
       viewport={{ once: true }}
       className="bg-black text-gray-300 py-10 mt-20"
     >
-      <div className="max-w-7xl mx-auto  px-6 grid md:grid-cols-4 gap-8 ">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-12 gap-8">
         {/* brand */}
-        <div>
+        <div className="col-span-12 md:col-span-4">
           <h3 className="text-3xl font-bold text-white">One Stop Carz</h3>
           <h4 className="text-xl font-semibold text-red-500 mt-3">
             Multi Brand Car Workshop
@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
 
         {/* QUICK LINKS */}
-        <div>
+        <div className="col-span-12 md:col-span-2">
           <h4 className="font-semibold text-white mb-3">Quick Links</h4>
           <div className="space-y-2 text-l flex flex-col">
             <Link href="/">Home</Link>
@@ -49,7 +49,7 @@ export default function Footer() {
 
         {/* CONTACT */}
         {/* CONTACT */}
-        <div>
+        <div className="col-span-12 md:col-span-3">
           <h4 className="font-semibold text-white mb-3">Contact</h4>
 
           {/* Address */}
@@ -109,7 +109,7 @@ export default function Footer() {
         </div>
 
         {/* CTA */}
-        <div>
+        <div className="col-span-12 md:col-span-3">
           <h4 className="font-semibold text-white mb-3">Book Now</h4>
           <p className="text-l mb-4">
             Call us or book your service online instantly.
