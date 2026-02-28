@@ -49,22 +49,22 @@ export const services: ServiceItem[] = [
       "Interior vacuuming, polishing, dashboard care, upholstery shampooing and exterior detailing for a fresh look.",
     ctaLabel: "Book Service",
   },
-  {
-    slug: "wheel-alignment",
-    title: "Wheel Alignment & Balancing",
-    shortDesc: "Smooth drive & tyre protection.",
-    description:
-      "Computerized wheel alignment and balancing for better control, mileage and tyre life.",
-    ctaLabel: "Book Service",
-  },
-  {
-    slug: "ac-service",
-    title: "AC Service",
-    shortDesc: "Cooling system diagnostics & repair.",
-    description:
-      "AC gas refill, leak detection, cooling coil cleaning and full air-conditioning inspection.",
-    ctaLabel: "Book Service",
-  },
+  // {
+  //   slug: "wheel-alignment",
+  //   title: "Wheel Alignment & Balancing",
+  //   shortDesc: "Smooth drive & tyre protection.",
+  //   description:
+  //     "Computerized wheel alignment and balancing for better control, mileage and tyre life.",
+  //   ctaLabel: "Book Service",
+  // },
+  // {
+  //   slug: "ac-service",
+  //   title: "AC Service",
+  //   shortDesc: "Cooling system diagnostics & repair.",
+  //   description:
+  //     "AC gas refill, leak detection, cooling coil cleaning and full air-conditioning inspection.",
+  //   ctaLabel: "Book Service",
+  // },
   {
     slug: "pickup-drop",
     title: "Pickup & Drop",
