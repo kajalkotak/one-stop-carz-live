@@ -3,6 +3,15 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaGoogle,
+  FaWhatsapp,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -39,14 +48,64 @@ export default function Footer() {
         </div>
 
         {/* CONTACT */}
+        {/* CONTACT */}
         <div>
           <h4 className="font-semibold text-white mb-3">Contact</h4>
-          <p className="text-l">
-            📍 Premvati Circle, opp. Welcare Hospital, Atladara, Vadodara,
-            Gujarat 390010
+
+          {/* Address */}
+          <p className="flex items-start gap-2 text-l">
+            <FaMapMarkerAlt className="text-lg mt-1 min-w-[18px]" />
+            Premvati Circle, opp. Welcare Hospital, Atladara, Vadodara, Gujarat
+            390010
           </p>
-          <p className="text-l mt-2">📞 Booking Desk: +91 94298 05368</p>
-          <p className="text-l">📞 Manager: +91 94298 05368</p>
+
+          {/* Booking */}
+          <p className="flex items-center gap-2 text-l mt-2">
+            <FaPhoneAlt className="text-lg min-w-[18px]" />
+            Booking :
+            <a href="tel:8460692482" className="hover:text-red-500 ml-1">
+              8460692482
+            </a>
+          </p>
+
+          {/* Social Icons */}
+          <div className="flex gap-4 mt-5">
+            <a
+              href="https://www.instagram.com/onestopcarz.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="text-2xl hover:text-pink-500" />
+            </a>
+
+            <a
+              href="https://www.facebook.com/profile.php?id=100066669783576"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF className="text-2xl hover:text-blue-500" />
+            </a>
+
+            <a
+              href="https://share.google/KjNmhf7JjOGRTuBQG"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGoogle className="text-2xl hover:text-red-500" />
+            </a>
+
+            <a
+              href="https://wa.me/918460692482"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp className="text-2xl hover:text-green-500" />
+            </a>
+
+            <a href="mailto:customercare.onestopcarz@gmail.com">
+              <FaEnvelope className="text-2xl hover:text-yellow-400" />
+            </a>
+          </div>
         </div>
 
         {/* CTA */}
