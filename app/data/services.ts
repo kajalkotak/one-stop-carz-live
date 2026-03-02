@@ -6,6 +6,7 @@ export interface ServiceItem {
   shortDesc: string;
   description: string;
   ctaLabel?: string;
+  companies?: string[];
 }
 
 export const services: ServiceItem[] = [
@@ -40,6 +41,21 @@ export const services: ServiceItem[] = [
     description:
       "We work with leading insurance companies to provide quick cashless claim settlement and repair services.",
     ctaLabel: "Contact Us",
+    companies: [
+      "/insurance/image1.png",
+      "/insurance/image2.png",
+      "/insurance/image3.png",
+      "/insurance/image4.png",
+      "/insurance/image5.png",
+      "/insurance/image6.png",
+      "/insurance/image7.png",
+      "/insurance/image8.png",
+      "/insurance/image9.png",
+      "/insurance/image10.png",
+      "/insurance/image11.png",
+      "/insurance/image12.png",
+      "/insurance/image12.png",
+    ],
   },
   {
     slug: "detailing",
