@@ -3,18 +3,13 @@
 import Image from "next/image";
 
 const galleryImages = [
-  "/gallery/IMG_3599.jpg",
-  "/gallery/IMG_3600.jpg",
-  "/gallery/IMG_3601.jpg",
-  "/gallery/IMG_3602.jpg",
-  "/gallery/IMG_3603.jpg",
-  "/gallery/IMG_3604.jpg",
-  "/gallery/IMG_3605.jpg",
-  "/gallery/IMG_3606.jpg",
-  "/gallery/IMG_3607.jpg",
-  "/gallery/IMG_3608.jpg",
-  "/gallery/IMG_3609.jpg",
-  "/gallery/IMG_3610.jpg",
+  "/gallery/gallery1.jpg",
+  "/gallery/gallery2.jpg",
+  "/gallery/gallery3.jpg",
+  "/gallery/gallery4.jpg",
+  "/gallery/gallery5.jpg",
+  "/gallery/gallery6.jpg",
+  "/gallery/gallery7.jpg",
 ];
 
 export default function GalleryPage() {
