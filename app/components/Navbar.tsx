@@ -22,7 +22,7 @@ export default function Navbar() {
 
         <Link href="/" className="flex items-center">
           <Image
-            src="/logo.png"
+            src="/newlogo.png"
             alt="One Stop Carz Logo"
             width={140}
             height={50}
