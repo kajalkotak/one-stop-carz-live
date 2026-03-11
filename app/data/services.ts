@@ -28,43 +28,43 @@ export const services: ServiceItem[] = [
   },
   {
     slug: "ceramic-coating",
-    title: "Ceramic Coating",
+    title: "Detailing Service",
     shortDesc: "Long-lasting paint protection & shine.",
     description:
       "Premium ceramic coating to protect your vehicle from UV rays, scratches, dirt and oxidation with mirror-like gloss.",
     ctaLabel: "View Offers",
   },
-  {
-    slug: "insurance-claim",
-    title: "Cashless Insurance Claim",
-    shortDesc: "Hassle-free accident repairs.",
-    description:
-      "We work with leading insurance companies to provide quick cashless claim settlement and repair services.",
-    ctaLabel: "Contact Us",
-    companies: [
-      "/insurance/image1.png",
-      "/insurance/image2.png",
-      "/insurance/image3.png",
-      "/insurance/image4.png",
-      "/insurance/image5.png",
-      "/insurance/image6.png",
-      "/insurance/image7.png",
-      "/insurance/image8.png",
-      "/insurance/image9.png",
-      "/insurance/image10.png",
-      "/insurance/image11.png",
-      "/insurance/image12.png",
-      "/insurance/image12.png",
-    ],
-  },
-  {
-    slug: "detailing",
-    title: "Car Detailing",
-    shortDesc: "Deep cleaning inside & outside.",
-    description:
-      "Interior vacuuming, polishing, dashboard care, upholstery shampooing and exterior detailing for a fresh look.",
-    ctaLabel: "Book Service",
-  },
+  // {
+  //   slug: "insurance-claim",
+  //   title: "Cashless Insurance Claim",
+  //   shortDesc: "Hassle-free accident repairs.",
+  //   description:
+  //     "We work with leading insurance companies to provide quick cashless claim settlement and repair services.",
+  //   ctaLabel: "Contact Us",
+  //   companies: [
+  //     "/insurance/image1.png",
+  //     "/insurance/image2.png",
+  //     "/insurance/image3.png",
+  //     "/insurance/image4.png",
+  //     "/insurance/image5.png",
+  //     "/insurance/image6.png",
+  //     "/insurance/image7.png",
+  //     "/insurance/image8.png",
+  //     "/insurance/image9.png",
+  //     "/insurance/image10.png",
+  //     "/insurance/image11.png",
+  //     "/insurance/image12.png",
+  //     "/insurance/image12.png",
+  //   ],
+  // },
+  // {
+  //   slug: "detailing",
+  //   title: "Car Detailing",
+  //   shortDesc: "Deep cleaning inside & outside.",
+  //   description:
+  //     "Interior vacuuming, polishing, dashboard care, upholstery shampooing and exterior detailing for a fresh look.",
+  //   ctaLabel: "Book Service",
+  // },
   // {
   //   slug: "wheel-alignment",
   //   title: "Wheel Alignment & Balancing",
@@ -81,12 +81,12 @@ export const services: ServiceItem[] = [
   //     "AC gas refill, leak detection, cooling coil cleaning and full air-conditioning inspection.",
   //   ctaLabel: "Book Service",
   // },
-  {
-    slug: "pickup-drop",
-    title: "Pickup & Drop",
-    shortDesc: "Convenient doorstep service.",
-    description:
-      "We pick up your car from your home or office and deliver it back after servicing for maximum convenience.",
-    ctaLabel: "Book Service",
-  },
+  // {
+  //   slug: "pickup-drop",
+  //   title: "Pickup & Drop",
+  //   shortDesc: "Convenient doorstep service.",
+  //   description:
+  //     "We pick up your car from your home or office and deliver it back after servicing for maximum convenience.",
+  //   ctaLabel: "Book Service",
+  // },
 ];
