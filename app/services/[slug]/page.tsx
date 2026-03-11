@@ -1,14 +1,57 @@
 import { services } from "@/app/data/services";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import MechanicalPricing from "@/app/components/MechanicalPricing";
 
 const mechanicalPaidPackages = [
-  "Engine Oil Change",
-  "Brake Service",
-  "Suspension Check",
-  "Battery Inspection",
-  "Coolant Replacement",
-  "AC Filter Cleaning",
+  {
+    name: "General Service (PMS)",
+    hatchback: 1250,
+    sedan: 1450,
+    suv: 1750,
+  },
+  {
+    name: "Wheel Balancing (4 Wheels)",
+    hatchback: 500,
+    sedan: 600,
+    suv: 900,
+  },
+  {
+    name: "Wheel Alignment",
+    hatchback: 300,
+    sedan: 300,
+    suv: 550,
+  },
+  {
+    name: "Tyre Rotation",
+    hatchback: 100,
+    sedan: 200,
+    suv: 400,
+  },
+  {
+    name: "Electrical Check-Up",
+    hatchback: 450,
+    sedan: 550,
+    suv: 650,
+  },
+  {
+    name: "Injector Service (4)",
+    hatchback: 600,
+    sedan: 800,
+    suv: 1200,
+  },
+  {
+    name: "Car Diagnostic",
+    hatchback: 500,
+    sedan: 750,
+    suv: 1000,
+  },
+  {
+    name: "Full Washing",
+    hatchback: 400,
+    sedan: 450,
+    suv: 500,
+  },
 ];
 
 export default async function ServiceDetailPage({
@@ -48,7 +91,7 @@ export default async function ServiceDetailPage({
               href="#paid-packages"
               className="border border-red-600 text-red-600 px-6 py-3 rounded-md font-semibold"
             >
-              Paid Package
+              Paid Services
             </a>
           </div>
         )}
@@ -98,27 +141,7 @@ export default async function ServiceDetailPage({
 
         {/* Mechanical Paid Packages */}
 
-        {service.slug === "mechanical-service" && (
-          <section id="paid-packages" className="mt-16">
-            <h2 className="text-2xl font-semibold mb-6">Paid Packages</h2>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {mechanicalPaidPackages.map((item, i) => (
-                <div key={i} className="border rounded-lg p-6 bg-yellow-50">
-                  <h3 className="font-semibold text-lg">{item}</h3>
-
-                  <a
-                    href={`https://wa.me/918460692482?text=Hi%20I%20want%20${item}%20service`}
-                    target="_blank"
-                    className="inline-block mt-4 bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-md"
-                  >
-                    Book Now
-                  </a>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
+        {service.slug === "mechanical-service" && <MechanicalPricing />}
 
         {/* WHY CHOOSE */}
 
