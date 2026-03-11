@@ -48,7 +48,7 @@ const services = [
     suv: 1650,
   },
   {
-    name: "Tufloan Coating",
+    name: "Tefloan Coating",
     hatchback: 3000,
     sedan: 4000,
     suv: 5000,
