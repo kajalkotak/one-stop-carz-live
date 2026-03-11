@@ -2,6 +2,7 @@ import { services } from "@/app/data/services";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import MechanicalPricing from "@/app/components/MechanicalPricing";
+import CeramicPricing from "@/app/components/CeramicServices";
 
 const mechanicalPaidPackages = [
   {
@@ -54,6 +55,63 @@ const mechanicalPaidPackages = [
   },
 ];
 
+const ceramicPaidServices = [
+  {
+    name: "Paint Protection - UV",
+    hatchback: 1000,
+    sedan: 1200,
+    suv: 1500,
+  },
+  {
+    name: "Exterior Beautification",
+    hatchback: 1500,
+    sedan: 1700,
+    suv: 2000,
+  },
+  {
+    name: "Interior Enrichment",
+    hatchback: 1200,
+    sedan: 1500,
+    suv: 1700,
+  },
+  {
+    name: "Engine Dressing & Cleaning",
+    hatchback: 500,
+    sedan: 600,
+    suv: 700,
+  },
+  {
+    name: "Headlight Restoration",
+    hatchback: 800,
+    sedan: 1000,
+    suv: 1200,
+  },
+  {
+    name: "Underbody Coating",
+    hatchback: 2200,
+    sedan: 2300,
+    suv: 2500,
+  },
+  {
+    name: "Silencer Coating",
+    hatchback: 1250,
+    sedan: 1450,
+    suv: 1650,
+  },
+  {
+    name: "Tufloan Coating",
+    hatchback: 3000,
+    sedan: 4000,
+    suv: 5000,
+  },
+  {
+    name: "Rodent Coating",
+    hatchback: 800,
+    sedan: 900,
+    suv: 1000,
+  },
+];
+
 export default async function ServiceDetailPage({
   params,
 }: {
@@ -99,7 +157,8 @@ export default async function ServiceDetailPage({
         {/* WHAT WE DO */}
 
         {service.slug !== "insurance-claim" &&
-          service.slug !== "mechanical-service" && (
+          service.slug !== "mechanical-service" &&
+          service.slug !== "ceramic-coating" && (
             <section className="mt-12">
               <h2 className="text-2xl font-semibold mb-4">What We Do</h2>
 
@@ -142,6 +201,8 @@ export default async function ServiceDetailPage({
         {/* Mechanical Paid Packages */}
 
         {service.slug === "mechanical-service" && <MechanicalPricing />}
+
+        {service.slug === "ceramic-coating" && <CeramicPricing />}
 
         {/* WHY CHOOSE */}
 
