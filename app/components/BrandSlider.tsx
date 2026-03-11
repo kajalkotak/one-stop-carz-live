@@ -32,13 +32,15 @@ export default function BrandSlider() {
           <div className="flex animate-scroll gap-10">
             {[...brands, ...brands].map((logo, i) => (
               <div key={i} className="flex-shrink-0">
-                <Image
-                  src={logo}
-                  alt="brand"
-                  width={140}
-                  height={140}
-                  className="object-contain  transition"
-                />
+                <div className="w-[120px] h-[70px] flex items-center justify-center bg-white rounded-md shadow-sm">
+                  <Image
+                    src={logo}
+                    alt="brand"
+                    width={140}
+                    height={140}
+                    className="object-contain max-h-[50px] w-auto  hover:grayscale-0 hover:scale-110 transition"
+                  />
+                </div>
               </div>
             ))}
           </div>
