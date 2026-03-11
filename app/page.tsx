@@ -8,6 +8,7 @@ import Counter from "./components/Counter";
 import LimitedOfferPopup from "@/app/components/LimitedOfferPopup";
 import { services } from "@/app/data/services";
 import GoogleReviews from "./components/GoogleReviews";
+import BrandSlider from "./components/BrandSlider";
 
 export default function Home() {
   return (
@@ -15,45 +16,74 @@ export default function Home() {
       <LimitedOfferPopup />
 
       {/* HERO SECTION */}
-      <section className="bg-gradient-to-r from-black to-gray-900 text-white py-28 px-6 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: -40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl md:text-6xl font-extrabold tracking-tight"
-        >
-          One Stop Carz
-        </motion.h1>
+      {/* HERO SECTION */}
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto"
-        >
-          Your trusted destination for car servicing, detailing, ceramic
-          coating, insurance claims and AMC packages.
-        </motion.p>
+      <section className="bg-gradient-to-r from-gray-900 to-black text-white py-24 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          {/* LEFT CONTENT */}
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.7, duration: 0.5 }}
-          className="mt-10 flex justify-center gap-6 flex-wrap"
-        >
-          <Link href="/booking">
-            <button className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-lg text-lg font-semibold shadow-lg">
-              Book Service
-            </button>
-          </Link>
+          <div>
+            <motion.h1
+              initial={{ opacity: 0, y: -40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-6xl font-extrabold leading-tight"
+            >
+              Professional <span className="text-red-600">Car Service</span>{" "}
+              <br />
+              You Can Trust
+            </motion.h1>
 
-          <Link href="/offers">
-            <button className="border border-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-black transition">
-              View Offers
-            </button>
-          </Link>
-        </motion.div>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="mt-6 text-lg text-gray-300 max-w-xl"
+            >
+              One Stop Carz provides premium car servicing, detailing, ceramic
+              coating and insurance claim support with experienced technicians
+              and genuine parts.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.7, duration: 0.5 }}
+              className="mt-8 flex gap-5 flex-wrap"
+            >
+              <Link href="/booking">
+                <button className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-lg text-lg font-semibold shadow-lg">
+                  Book Service
+                </button>
+              </Link>
+
+              <Link href="/offers">
+                <button className="border border-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-black transition">
+                  View Offers
+                </button>
+              </Link>
+            </motion.div>
+          </div>
+
+          {/* RIGHT IMAGE */}
+
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="relative w-full h-[420px]"
+          >
+            <Image
+              src="/banner/main-banner.png"
+              alt="One Stop Carz Workshop"
+              fill
+              className="object-cover rounded-xl shadow-2xl"
+            />
+          </motion.div>
+        </div>
       </section>
+
+      <BrandSlider />
 
       {/* SERVICES PREVIEW */}
       <section className="py-20 px-6 bg-gray-50">
