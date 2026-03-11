@@ -7,7 +7,7 @@ export const offers = [
     shortDesc: "Essential servicing for smooth daily driving.",
     description:
       "Includes oil change, filter cleaning, brake inspection, battery check and basic diagnostics.",
-    image: "/offers/basic.jpg",
+    image: "/offers/basic-package.jpg",
   },
   {
     slug: "premium-package",
@@ -15,8 +15,9 @@ export const offers = [
     shortDesc: "Complete car care with full inspection.",
     description:
       "Includes complete servicing, detailing, wheel alignment, AC check and engine diagnostics.",
-    image: "/offers/premium.jpg",
+    image: "/offers/premium-package.jpg",
   },
+  
   {
     slug: "amc-plan",
     title: "AMC Plan",

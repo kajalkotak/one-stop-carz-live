@@ -32,30 +32,30 @@ export default function PackagesPage() {
               {/* PRICE */}
               <div className="mt-4">
                 {/* PETROL */}
-                {/* {plan.petrolActualPrice && (
+                {plan.petrolActualPrice && (
                   <p className="text-sm line-through text-gray-400">
                     Petrol ₹{plan.petrolActualPrice}
                   </p>
-                )} */}
+                )}
 
-                {/* {plan.petrolOfferPrice && (
+                {plan.petrolOfferPrice && (
                   <p className="text-xl font-bold text-red-600">
                     Petrol ₹{plan.petrolOfferPrice}
                   </p>
-                )} */}
+                )}
 
                 {/* DIESEL */}
-                {/* {plan.dieselActualPrice && (
+                {plan.dieselActualPrice && (
                   <p className="text-sm line-through text-gray-400 mt-1">
                     Diesel ₹{plan.dieselActualPrice}
                   </p>
-                )} */}
+                )}
 
-                {/* {plan.dieselOfferPrice && (
+                {plan.dieselOfferPrice && (
                   <p className="text-xl font-bold text-red-600">
                     Diesel ₹{plan.dieselOfferPrice}
                   </p>
-                )} */}
+                )}
 
                 {/* DURATION */}
                 {plan.duration && (
