@@ -78,12 +78,13 @@ export default async function OfferDetailPage({
           {item.actualPrice && (
             <>
               <p className="text-sm line-through text-gray-400">
-                ₹{item.actualPrice}
+                ₹{item.actualPrice} + GST
               </p>
 
               {item.offerPrice && (
                 <p className="text-3xl font-bold text-red-600">
-                  ₹{item.offerPrice}
+                  ₹{item.offerPrice}{" "}
+                  <span className="text-sm text-gray-500">+ GST</span>
                 </p>
               )}
             </>
