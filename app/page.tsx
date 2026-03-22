@@ -85,6 +85,11 @@ export default function Home() {
 
       <BrandSlider />
 
+      <p className="text-center text-gray-500 text-sm p-5 mt-6">
+        Note : All company logos, names, and trademarks mentioned above are the
+        respective properties of their owners{" "}
+      </p>
+
       {/* SERVICES PREVIEW */}
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
