@@ -146,7 +146,7 @@ export default function BodyPaintingPricing() {
       </div>
 
       <p className="text-sm text-gray-500 mt-4 text-center">
-        Metallic paint charges may increase by ₹250 per panel.
+        Metallic paint charges may increase by ₹250 per panel on every segment.
       </p>
     </section>
   );
