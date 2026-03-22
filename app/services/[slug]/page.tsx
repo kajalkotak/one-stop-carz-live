@@ -320,12 +320,12 @@ export default async function ServiceDetailPage({
 
             <div className="border rounded-lg p-5">
               <span className="text-red-600 font-bold text-xl">02</span>
-              <p className="mt-2 font-medium">Vehicle Inspection</p>
+              <p className="mt-2 font-medium">Denting</p>
             </div>
 
             <div className="border rounded-lg p-5">
               <span className="text-red-600 font-bold text-xl">03</span>
-              <p className="mt-2 font-medium">Service Execution</p>
+              <p className="mt-2 font-medium">Painting</p>
             </div>
 
             <div className="border rounded-lg p-5">
