@@ -31,6 +31,7 @@ export default function ServicesPage() {
               key={service.slug}
               className="bg-white p-8 rounded-xl shadow hover:shadow-lg transition flex flex-col"
             >
+              
               <h3 className="text-xl font-semibold">{service.title}</h3>
 
               <p className="mt-3 text-gray-600">{service.shortDesc}</p>

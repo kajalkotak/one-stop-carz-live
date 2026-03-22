@@ -265,6 +265,10 @@ export default async function ServiceDetailPage({
                 </div>
               ))}
             </div>
+            <p className="text-center text-gray-500 text-sm p-5 mt-6">
+              Note : All company logos, names, and trademarks mentioned above
+              are the respective properties of their owners{" "}
+            </p>
           </section>
         )}
 
