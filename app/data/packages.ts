@@ -200,7 +200,7 @@ export const packages: PackageItem[] = [
     category: "membership",
     title: "Elite Care Membership",
     duration: "3 Years",
-    actualPrice: 2999,
+    actualPrice: 6000,
     offerPrice: 499,
     shortDesc: "Affordable long-term membership with complimentary benefits.",
     description:
@@ -226,7 +226,7 @@ export const packages: PackageItem[] = [
     category: "membership",
     title: "Advance Care Membership",
     duration: "4 Years",
-    actualPrice: 4999,
+    actualPrice: 10000,
     offerPrice: 999,
     shortDesc: "Premium membership with AMC discounts and extra savings.",
     description:
