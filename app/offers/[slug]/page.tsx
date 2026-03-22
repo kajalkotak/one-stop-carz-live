@@ -78,13 +78,13 @@ export default async function OfferDetailPage({
           {item.actualPrice && (
             <>
               <p className="text-sm line-through text-gray-400">
-                ₹{item.actualPrice} + GST
+                ₹{item.actualPrice} +GST
               </p>
 
               {item.offerPrice && (
                 <p className="text-3xl font-bold text-red-600">
                   ₹{item.offerPrice}{" "}
-                  <span className="text-sm text-gray-500">+ GST</span>
+                  <span className="text-sm text-gray-500">+GST</span>
                 </p>
               )}
             </>
@@ -94,12 +94,13 @@ export default async function OfferDetailPage({
             <div className="mt-4">
               {item.petrolActualPrice && (
                 <p className="text-sm line-through text-gray-400">
-                  Petrol: ₹{item.petrolActualPrice}
+                  Petrol: ₹{item.petrolActualPrice} +GST
                 </p>
               )}
 
               <p className="text-xl font-semibold text-red-600">
-                Petrol: ₹{item.petrolOfferPrice}
+                Petrol: ₹{item.petrolOfferPrice} 
+                <span className="text-sm text-gray-500 ml-2">+GST</span>
               </p>
             </div>
           )}
@@ -108,12 +109,13 @@ export default async function OfferDetailPage({
             <div className="mt-2">
               {item.dieselActualPrice && (
                 <p className="text-sm line-through text-gray-400">
-                  Diesel: ₹{item.dieselActualPrice}
+                  Diesel: ₹{item.dieselActualPrice} +GST
                 </p>
               )}
 
               <p className="text-xl font-semibold text-red-600">
                 Diesel: ₹{item.dieselOfferPrice}
+                <span className="text-sm text-gray-500 ml-2">+GST</span>
               </p>
             </div>
           )}

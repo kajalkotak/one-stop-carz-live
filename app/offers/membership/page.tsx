@@ -33,13 +33,14 @@ export default function MembershipPage() {
               <div className="mt-4">
                 {plan.actualPrice && (
                   <p className="text-sm line-through text-gray-400">
-                    ₹{plan.actualPrice}
+                    ₹{plan.actualPrice} +GST
                   </p>
                 )}
 
                 {plan.offerPrice && (
                   <p className="text-2xl font-bold text-red-600">
                     ₹{plan.offerPrice}
+                    <span className="text-sm text-gray-500 ml-2">+GST</span>
                   </p>
                 )}
 

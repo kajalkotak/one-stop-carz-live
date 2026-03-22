@@ -34,26 +34,28 @@ export default function PackagesPage() {
                 {/* PETROL */}
                 {plan.petrolActualPrice && (
                   <p className="text-sm line-through text-gray-400">
-                    Petrol ₹{plan.petrolActualPrice}
+                    Petrol ₹{plan.petrolActualPrice} +GST
                   </p>
                 )}
 
                 {plan.petrolOfferPrice && (
                   <p className="text-xl font-bold text-red-600">
                     Petrol ₹{plan.petrolOfferPrice}
+                    <span className="text-sm text-gray-500 ml-2">+GST</span>
                   </p>
                 )}
 
                 {/* DIESEL */}
                 {plan.dieselActualPrice && (
                   <p className="text-sm line-through text-gray-400 mt-1">
-                    Diesel ₹{plan.dieselActualPrice}
+                    Diesel ₹{plan.dieselActualPrice} +GST
                   </p>
                 )}
 
                 {plan.dieselOfferPrice && (
                   <p className="text-xl font-bold text-red-600">
                     Diesel ₹{plan.dieselOfferPrice}
+                    <span className="text-sm text-gray-500 ml-2">+GST</span>
                   </p>
                 )}
 
