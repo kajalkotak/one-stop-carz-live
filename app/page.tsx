@@ -8,9 +8,14 @@ import Counter from "./components/Counter";
 import LimitedOfferPopup from "@/app/components/LimitedOfferPopup";
 import { services } from "@/app/data/services";
 import GoogleReviews from "./components/GoogleReviews";
-import BrandSlider from "./components/BrandSlider";
+import BrandSlider, { defaultBrands } from "./components/BrandSlider";
 
 export default function Home() {
+  const extraBrands = [
+    "/insurance/companylogo_1.png",
+    "/insurance/companylogo_2.png",
+  ];
+
   return (
     <main className="min-h-screen bg-gray-50">
       <LimitedOfferPopup />
@@ -83,7 +88,7 @@ export default function Home() {
         </div>
       </section>
 
-      <BrandSlider />
+      <BrandSlider customBrands={[...defaultBrands, ...extraBrands]} />
 
       <p className="text-center text-gray-500 text-sm p-5 mt-6">
         Note : All company logos, names, and trademarks mentioned above are the

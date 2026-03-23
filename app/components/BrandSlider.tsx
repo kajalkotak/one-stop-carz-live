@@ -4,7 +4,12 @@
 
 import Image from "next/image";
 
-const brands = [
+type BrandSliderProps = {
+  customBrands?: string[];
+};
+
+// 👇 default logos (same as your current)
+export const defaultBrands = [
   "/insurance/image1.png",
   "/insurance/image2.png",
   "/insurance/image3.png",
@@ -20,7 +25,10 @@ const brands = [
   "/insurance/image13.png",
 ];
 
-export default function BrandSlider() {
+export default function BrandSlider({ customBrands }: BrandSliderProps) {
+  // 👇 agar custom aaya to use karo warna default
+  const brands = customBrands || defaultBrands;
+
   return (
     <section className="py-16 bg-white border-t border-gray-200">
       <div className="max-w-7xl mx-auto text-center px-6">
@@ -38,7 +46,7 @@ export default function BrandSlider() {
                     alt="brand"
                     width={140}
                     height={140}
-                    className="object-contain max-h-[50px] w-auto  hover:grayscale-0 hover:scale-110 transition"
+                    className="object-contain max-h-[50px] w-auto  hover:scale-110 transition duration-300"
                   />
                 </div>
               </div>
