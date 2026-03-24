@@ -1,6 +1,6 @@
 // app/data/package.ts
 
-export type PackageCategory = "package" | "amc" | "membership";
+export type PackageCategory = "package" | "amc" | "membership" | "detailing";
 
 export type VehicleType = "Hatchback" | "Sedan" | "SUV" | "Luxury";
 
@@ -244,6 +244,54 @@ export const packages: PackageItem[] = [
       "Exclusive Discounts on Ceramic / Teflon / Body Polish",
       "Access Latest Offers",
       "Discount on Labour Charges",
+    ],
+  },
+
+  // ceramic
+
+  {
+    slug: "3m",
+    category: "detailing",
+    title: "3M Detailing Offer",
+    subtitle: "Limited Time Premium Protection",
+    actualPrice: 16500,
+    offerPrice: 9999,
+    shortDesc:
+      "Premium ceramic coating for any make & model with Elite Care membership and protection combo absolutely free.",
+    description:
+      "One Stop Carz Vadodara brings a limited-time Ceramic Coating offer at just ₹9,999 + GST for any car size or model. Includes a FREE 3 Year Elite Care Membership worth ₹6000 and a Complete Protection Combo (Glass, Headlight & Engine coating) worth ₹3500.",
+    includes: [
+      "Premium Ceramic Coating",
+      "3 Year Elite Care Membership (FREE)",
+      "Glass Coating (FREE)",
+      "Headlight Coating (FREE)",
+      "Engine Coating (FREE)",
+      "Mirror Finish Gloss",
+      "UV Protection",
+      "Hydrophobic Water Repellency",
+    ],
+  },
+
+  {
+    slug: "vista",
+    category: "detailing",
+    title: "Vista Detailing Offer",
+    subtitle: "Limited Time Premium Protection",
+    actualPrice: 16500,
+    offerPrice: 9999,
+    shortDesc:
+      "Premium ceramic coating for any make & model with Elite Care membership and protection combo absolutely free.",
+    description:
+      "One Stop Carz Vadodara brings a limited-time Ceramic Coating offer at just ₹9,999 + GST for any car size or model. Includes a FREE 3 Year Elite Care Membership worth ₹6000 and a Complete Protection Combo (Glass, Headlight & Engine coating) worth ₹3500.",
+    includes: [
+      "Premium Ceramic Coating",
+      "3 Year Elite Care Membership (FREE)",
+      "Glass Coating (FREE)",
+      "Headlight Coating (FREE)",
+      "Engine Coating (FREE)",
+      "Mirror Finish Gloss",
+      "UV Protection",
+      "Hydrophobic Water Repellency",
     ],
   },
 ];

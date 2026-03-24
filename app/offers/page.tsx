@@ -19,12 +19,16 @@ export default function OffersPage() {
       slug: "membership",
       desc: "Exclusive care programs with priority benefits.",
     },
+    {
+      title: "Detailing Offer",
+      slug: "detailing",
+      desc: "Premium ceramic coating for any make & model with Elite Care membership and protection combo absolutely free.",
+    },
   ];
 
   return (
     <main className="min-h-screen bg-gray-50 px-6 py-20">
       <div className="max-w-7xl mx-auto text-center">
-
         <h1 className="text-4xl font-bold">
           Our <span className="text-red-600">Offers</span>
         </h1>
@@ -35,7 +39,6 @@ export default function OffersPage() {
 
         {/* CATEGORY GRID */}
         <div className="mt-14 grid md:grid-cols-3 gap-8">
-
           {categories.map((cat) => (
             <Link
               key={cat.slug}
@@ -51,7 +54,6 @@ export default function OffersPage() {
               </span>
             </Link>
           ))}
-
         </div>
       </div>
     </main>
