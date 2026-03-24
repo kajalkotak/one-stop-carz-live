@@ -49,12 +49,12 @@ export default async function ServiceDetailPage({
 
         {service.slug === "ceramic-coating" && (
           <div className="mt-8 flex gap-4 flex-wrap">
-            <a
-              href="#ceramic-section"
+            <Link
+              href="/offers/ceramic-coating-offer"
               className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-semibold"
             >
               Ceramic Coating
-            </a>
+            </Link>
 
             <a
               href="#beautification-section"

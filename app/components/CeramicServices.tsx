@@ -72,7 +72,7 @@ export default function CeramicPricing() {
   return (
     <section id="paid-packages" className="mt-16">
       <h2 className="text-2xl font-semibold mb-6 text-center">
-        Ceramic Coating Services
+        Detailing Services
       </h2>
 
       {/* Car Type Selector */}
