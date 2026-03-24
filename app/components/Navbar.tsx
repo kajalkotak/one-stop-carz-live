@@ -40,6 +40,14 @@ export default function Navbar() {
           >
             Home
           </Link>
+
+          <Link
+            href="/about"
+            className="hover:text-red-500 transition-colors duration-200"
+          >
+            About Us
+          </Link>
+
           <Link
             href="/offers"
             className="hover:text-red-500 transition-colors duration-200"
