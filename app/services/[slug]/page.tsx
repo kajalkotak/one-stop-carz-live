@@ -67,12 +67,12 @@ export default async function ServiceDetailPage({
 
         {service.slug === "body-denting-painting" && (
           <div className="mt-8 flex gap-4 flex-wrap">
-            <a
-              href="#cashless-section"
+            <Link
+              href="/services/cashless-insurance"
               className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-semibold"
             >
               Cashless Insurance Claim
-            </a>
+            </Link>
 
             <a
               href="#bodywork-section"
@@ -245,7 +245,7 @@ export default async function ServiceDetailPage({
 
         {/* CASHLESS INSURANCE LOGOS */}
 
-        {service.slug === "body-denting-painting" && (
+        {/* {service.slug === "body-denting-painting" && (
           <section id="cashless-section" className="mt-16">
             <h2 className="text-2xl font-semibold mb-8 text-center">
               Cashless Insurance Claim
@@ -270,7 +270,7 @@ export default async function ServiceDetailPage({
               are the respective properties of their owners{" "}
             </p>
           </section>
-        )}
+        )} */}
 
         {/* PAID BODY WORK TABLE */}
 
