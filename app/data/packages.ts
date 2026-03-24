@@ -71,8 +71,9 @@ export const packages: PackageItem[] = [
     category: "package",
     title: "Premium Package",
     subtitle: "Advanced Performance Care",
-    petrolActualPrice: 9000,
+    petrolActualPrice: 9800,
     petrolOfferPrice: 5999,
+    dieselOfferPrice: 7499,
     vehicleTypes: ["Hatchback", "Sedan", "SUV", "Luxury"],
     shortDesc:
       "Comprehensive service package delivering advanced maintenance, safety checks and premium car care.",
