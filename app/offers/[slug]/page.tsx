@@ -45,6 +45,10 @@ export default async function OfferDetailPage({
       return `/packages/${item.slug}.png`;
     }
 
+    if (item.category === "detailing") {
+      return `/${item.category}/${item.slug}.png`;
+    }
+
     return null;
   }
 
@@ -61,14 +65,15 @@ export default async function OfferDetailPage({
 
         {poster && (
           <div className="my-10">
-            <Image
+            {/* <Image
               src={poster}
               alt={item.title}
               width={1200}
               height={1600}
               className="w-full rounded-xl object-contain"
               priority
-            />
+            /> */}
+            <img src={poster} alt={item.title} className="w-full rounded-xl" />
           </div>
         )}
 
@@ -99,7 +104,7 @@ export default async function OfferDetailPage({
               )}
 
               <p className="text-xl font-semibold text-red-600">
-                Petrol: ₹{item.petrolOfferPrice} 
+                Petrol: ₹{item.petrolOfferPrice}
                 <span className="text-sm text-gray-500 ml-2">+GST</span>
               </p>
             </div>
