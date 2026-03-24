@@ -125,7 +125,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-red-600 text-white py-20 px-6 text-center">
+      <section className="bg-red-500 text-white py-20 px-6 text-center">
         <h2 className="text-3xl font-bold">Need Service or Insurance Claim?</h2>
 
         <p className="mt-4">
