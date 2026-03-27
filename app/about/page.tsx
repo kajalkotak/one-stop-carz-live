@@ -63,18 +63,28 @@ export default function AboutPage() {
             <h3 className="text-2xl font-semibold mb-4">Our Vision</h3>
             <p className="text-gray-600">
               To become the most trusted and preferred multi-brand car service
-              center in India by delivering consistent quality and innovation.
+              center & One Stop Solution for all kind of Car Related Needs at
+              only one step in india by delivering consistent quality,
+              innovation, and customer satisfaction.
+            </p>
+            <p>
+              We are dedicated to making car service easy, reliable, and
+              stress-free for every customer.
             </p>
           </div>
 
           <div className="bg-white p-8 rounded-xl shadow">
             <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
             <ul className="list-disc pl-5 text-gray-600 space-y-2">
-              <li>Provide high-quality services</li>
-              <li>Maintain transparent pricing</li>
-              <li>Ensure quick turnaround time</li>
-              <li>Build long-term customer trust</li>
-              <li>Upgrade technology continuously</li>
+              <li>To provide high-quality and reliable automotive services</li>
+              <li>To ensure transparent and fair pricing</li>
+              <li>
+                To deliver quick turnaround time without compromising quality
+              </li>
+              <li>To build long-term customer relationships</li>
+              <li>
+                To continuously upgrade technology and skills for better service
+              </li>
             </ul>
           </div>
         </div>
