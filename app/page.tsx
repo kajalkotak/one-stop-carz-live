@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { packages } from "@/app/data/packages";
 import Counter from "./components/Counter";
@@ -20,329 +19,252 @@ export default function Home() {
     <main className="min-h-screen bg-gray-50">
       <LimitedOfferPopup />
 
-      {/* HERO SECTION */}
-      {/* HERO SECTION */}
-
+      {/* 🔥 HERO */}
       <section className="bg-gradient-to-r from-gray-900 to-black text-white py-24 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          {/* LEFT CONTENT */}
-
+          
           <div>
-            <motion.h1
-              initial={{ opacity: 0, y: -40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl md:text-6xl font-extrabold leading-tight"
-            >
-              Professional <span className="text-red-600">Car Service</span>{" "}
-              <br />
-              You Can Trust
-            </motion.h1>
+            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
+              Accident? Service Due?{" "}
+              <span className="text-red-600">Don’t Worry</span>
+              <br /> We Handle Everything
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="mt-6 text-lg text-gray-300 max-w-xl"
-            >
-              One Stop Carz provides premium car servicing, detailing, ceramic
-              coating and insurance claim support with experienced technicians
-              and genuine parts.
-            </motion.p>
+            <p className="mt-6 text-lg text-gray-300 max-w-xl">
+              Premium Car Care | Accident Repair | Insurance Claim Assistance | Detailing
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.7, duration: 0.5 }}
-              className="mt-8 flex gap-5 flex-wrap"
-            >
+            <p className="mt-4 text-gray-400 max-w-xl">
+              We provide end-to-end automotive solutions with a focus on quality,
+              transparency, and customer satisfaction. From routine servicing to
+              complete accident repairs & detailing services, your car is in expert hands.
+            </p>
+
+            <p className="mt-3 text-gray-400 max-w-xl">
+              At One Stop Carz, we specialize in multi-brand car servicing,
+              denting-painting, insurance claim support and detailing. Our goal is to
+              deliver dealership-level quality at competitive pricing with fast turnaround time.
+            </p>
+
+            <div className="mt-8 flex gap-5 flex-wrap">
               <Link href="/booking">
-                <button className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-lg text-lg font-semibold shadow-lg">
+                <button className="bg-red-600 px-8 py-4 rounded-lg text-lg font-semibold">
                   Book Service
                 </button>
               </Link>
 
-              <Link href="/offers">
-                <button className="border border-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-black transition">
-                  View Offers
-                </button>
-              </Link>
-            </motion.div>
+              <a
+                href="https://wa.me/919624702104"
+                className="bg-green-600 px-8 py-4 rounded-lg text-lg font-semibold"
+              >
+                WhatsApp Now
+              </a>
+            </div>
           </div>
 
-          {/* RIGHT IMAGE */}
-
-          <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative w-full h-[420px]"
-          >
+          <div className="relative w-full h-[420px]">
             <Image
               src="/banner/main-banner.png"
-              alt="One Stop Carz Workshop"
+              alt="Workshop"
               fill
-              className="object-cover rounded-xl shadow-2xl"
+              className="object-cover rounded-xl"
             />
-          </motion.div>
+          </div>
         </div>
       </section>
 
+      {/* 🔥 BRAND SLIDER */}
       <BrandSlider customBrands={[...defaultBrands, ...extraBrands]} />
 
-      <p className="text-center text-gray-500 text-sm p-5 mt-6">
-        Note : All company logos, names, and trademarks mentioned above are the
-        respective properties of their owners{" "}
-      </p>
-
-      {/* SERVICES PREVIEW */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          {/* SERVICES HEADING */}
-          <h2 className="text-4xl font-bold text-center">
-            Our <span className="text-red-600 tracking-wide">Services</span>
+      {/* 🔥 CORE SERVICES */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl font-bold">
+            Our <span className="text-red-600">Core Services</span>
           </h2>
 
-          <p className="mt-4 text-center text-gray-600 max-w-2xl mx-auto">
-            Professional car care solutions delivered by expert technicians.
-          </p>
-
-          {/* SERVICES GRID */}
-          <div className="mt-12 grid md:grid-cols-4 gap-6">
-            {services.slice(0, 4).map((service) => (
-              <motion.div
-                key={service.slug}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col"
-              >
-                <h3 className="text-xl font-semibold">{service.title}</h3>
-
-                <p className="mt-2 text-gray-600 flex-grow">
-                  {service.shortDesc}
-                </p>
-
-                {/* BUTTON */}
-                <Link
-                  href={`/services/${service.slug}`}
-                  className="mt-4 inline-block text-center bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md font-semibold"
-                >
-                  View Details
-                </Link>
-              </motion.div>
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            {[
+              "Car Service & Maintenance",
+              "Denting Painting (Accident Repair)",
+              "Insurance Claim",
+              "Engine & Mechanical Repairs",
+              "Car Detailing & Coating",
+              "Electrical & AC Work",
+            ].map((item, i) => (
+              <div key={i} className="bg-gray-50 p-6 rounded-lg shadow">
+                <p className="font-semibold">{item}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* WHY CHOOSE US */}
+      {/* 🔥 SERVICES */}
+<section className="py-20 px-6 bg-gray-50">
+  <div className="max-w-7xl mx-auto text-center">
+    <h2 className="text-4xl font-bold">
+      Our <span className="text-red-600">Services</span>
+    </h2>
+
+    <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+      Complete car care solutions designed for performance, safety and appearance.
+    </p>
+
+    <div className="mt-14 grid md:grid-cols-3 gap-8">
+      
+      {/* SERVICE 1 */}
+      <div className="bg-white p-8 rounded-xl shadow hover:shadow-xl transition">
+        <h3 className="text-2xl font-semibold">
+          Mechanical Service
+        </h3>
+
+        <p className="mt-4 text-gray-600">
+          Complete engine diagnostics, maintenance and repair services to keep your car running smoothly.
+        </p>
+
+        <Link
+          href="/services/mechanical-service"
+          className="mt-6 inline-block bg-red-600 text-white px-6 py-2 rounded-md"
+        >
+          View Details
+        </Link>
+      </div>
+
+      {/* SERVICE 2 */}
+      <div className="bg-white p-8 rounded-xl shadow hover:shadow-xl transition border-2 border-red-600">
+        <h3 className="text-2xl font-semibold">
+          Denting & Painting
+        </h3>
+
+        <p className="mt-4 text-gray-600">
+          Professional accident repair, dent removal and 100% color match painting services.
+        </p>
+
+        <Link
+          href="/services/body-denting-painting"
+          className="mt-6 inline-block bg-red-600 text-white px-6 py-2 rounded-md"
+        >
+          View Details
+        </Link>
+      </div>
+
+      {/* SERVICE 3 */}
+      <div className="bg-white p-8 rounded-xl shadow hover:shadow-xl transition">
+        <h3 className="text-2xl font-semibold">
+          Car Detailing
+        </h3>
+
+        <p className="mt-4 text-gray-600">
+          Premium detailing services including ceramic coating, polishing and complete car beautification.
+        </p>
+
+        <Link
+          href="/services/ceramic-coating"
+          className="mt-6 inline-block bg-red-600 text-white px-6 py-2 rounded-md"
+        >
+          View Details
+        </Link>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+      {/* 🔥 WHY CHOOSE */}
       <section className="bg-white py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl font-bold">
-            Why Choose{" "}
-            <span className="text-red-600 tracking-wide">One Stop Carz</span>?
+            Why Choose <span className="text-red-600">Us</span>
           </h2>
 
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-            We focus on quality workmanship, honest pricing and complete
-            customer satisfaction for every vehicle we service.
-          </p>
-
-          <div className="mt-12 grid md:grid-cols-3 gap-8">
+          <div className="mt-12 grid md:grid-cols-4 gap-6">
             {[
-              {
-                title: "Certified Technicians",
-                desc: "Experienced professionals trained to handle all car models.",
-              },
-              {
-                title: "Transparent Pricing",
-                desc: "No hidden charges. You know what you pay for.",
-              },
-              {
-                title: "Genuine Parts",
-                desc: "Only original and high-quality spare parts used.",
-              },
-              {
-                title: "Quick Turnaround",
-                desc: "Fast service delivery without compromising quality.",
-              },
-              {
-                title: "Customer Satisfaction",
-                desc: "Hundreds of happy customers and growing every day.",
-              },
-              {
-                title: "Easy Booking",
-                desc: "Book your service online in just a few clicks.",
-              },
-            ].map((item) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition"
-              >
-                <h3 className="text-xl font-semibold">{item.title}</h3>
-                <p className="mt-3 text-gray-600">{item.desc}</p>
-              </motion.div>
+              "Save up to 30% vs Authorized Service Center",
+              "Experienced & Well Educated Technicians",
+              "Genuine Spare Parts",
+              "Quick Turnaround Time",
+              "Insurance Claim Support",
+              "Customer First Approach",
+              "100% Color Match Guarantee",
+              "Hassle Free Service",
+              "Transparent Pricing",
+              "Accuracy of Overall Work",
+            ].map((item, i) => (
+              <div key={i} className="bg-gray-50 p-6 rounded-xl shadow">
+                <p className="font-semibold">{item}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section className="bg-gray-50 py-24 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          {/* HEADING */}
-          <h2 className="text-4xl font-bold">
-            How <span className="text-red-600 tracking-wide">It Works</span>
-          </h2>
+      {/* 🔥 URGENT CTA */}
+      <section className="bg-red-600 text-white py-16 px-6 text-center">
+        <h2 className="text-3xl font-bold">
+          Need Urgent Repair or Insurance Claim?
+        </h2>
 
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-            Booking your car service with One Stop Carz is quick and
-            hassle-free.
-          </p>
+        <p className="mt-4">
+          Call Now: 9624702104 / 9624702103 / 9624702102
+        </p>
 
-          {/* STEPS GRID */}
-          <div className="mt-14 grid md:grid-cols-4 gap-8">
-            {[
-              {
-                step: "01",
-                title: "Choose Service",
-                desc: "Select the service or package that suits your car.",
-              },
-              {
-                step: "02",
-                title: "Pick Date & Time",
-                desc: "Choose your preferred slot from our booking system.",
-              },
-              {
-                step: "03",
-                title: "Confirm Booking",
-                desc: "Submit details and get instant confirmation.",
-              },
-              {
-                step: "04",
-                title: "Delivery",
-                desc: "We deliver your car back to your doorstep after service completion.",
-              },
-            ].map((item) => (
-              <motion.div
-                key={item.step}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="bg-white p-8 rounded-xl shadow hover:shadow-lg transition relative"
-              >
-                {/* STEP NUMBER */}
-                <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold">
-                  {item.step}
-                </div>
-
-                <h3 className="mt-10 text-xl font-semibold">{item.title}</h3>
-
-                <p className="mt-3 text-gray-600">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+        <a
+          href="https://wa.me/919624702104"
+          className="inline-block mt-6 bg-white text-red-600 px-6 py-3 rounded-md font-semibold"
+        >
+          WhatsApp for Instant Support
+        </a>
       </section>
 
-      {/* FEATURED OFFERS */}
+      {/* 🔥 OFFERS */}
       <section className="bg-white py-24 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          {/* HEADING */}
           <h2 className="text-4xl font-bold">
             Featured <span className="text-red-600">Offers</span>
           </h2>
 
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-            Explore our most popular service packages and memberships.
-          </p>
-
-          {/* OFFERS GRID */}
           <div className="mt-14 grid md:grid-cols-4 gap-8">
             {packages.slice(0, 4).map((item) => (
-              <motion.div
+              <div
                 key={item.slug}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition flex flex-col"
+                className="bg-gray-50 p-6 rounded-xl shadow flex flex-col"
               >
                 <h3 className="text-xl font-semibold">{item.title}</h3>
 
-                <p className="mt-3 text-gray-600 flex-grow">{item.shortDesc}</p>
+                <p className="mt-3 text-gray-600 flex-grow">
+                  {item.shortDesc}
+                </p>
 
-                <div className="mt-6 flex gap-3 justify-center">
-                  <Link
-                    href={`/offers/${item.slug}`}
-                    className="border border-red-600 text-red-600 px-4 py-2 rounded-md font-semibold hover:bg-red-600 hover:text-white transition"
-                  >
-                    View Details
-                  </Link>
-
-                  <Link
-                    href={`/booking?service=${encodeURIComponent(item.title)}`}
-                    className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md font-semibold"
-                  >
-                    Book Now
-                  </Link>
-                </div>
-              </motion.div>
+                <Link
+                  href={`/offers/${item.slug}`}
+                  className="mt-4 bg-red-600 text-white px-4 py-2 rounded-md"
+                >
+                  View Details
+                </Link>
+              </div>
             ))}
-          </div>
-
-          {/* VIEW ALL CTA */}
-          <div className="mt-16">
-            <Link
-              href="/offers"
-              className="inline-block border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition"
-            >
-              View All Offers
-            </Link>
           </div>
         </div>
       </section>
 
       <GoogleReviews />
 
-      {/* STATS SECTION */}
-      <section className="bg-black py-24 px-6 text-white">
-        <div className="max-w-7xl mx-auto text-center">
-          {/* HEADING */}
-          <h2 className="text-4xl font-bold">
-            Trusted by <span className="text-red-600">Thousands</span>
-          </h2>
+      {/* 🔥 STATS */}
+      <section className="bg-black py-24 px-6 text-white text-center">
+        <h2 className="text-4xl font-bold">
+          Trusted by <span className="text-red-600">Thousands</span>
+        </h2>
 
-          <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-            Our experience and dedication speak through the numbers.
-          </p>
+        <div className="mt-14 grid md:grid-cols-2 gap-10">
+          <div>
+            <Counter value={11} suffix="+" />
+            <p>Years Experience</p>
+          </div>
 
-          {/* STATS GRID */}
-          <div className="mt-14 grid md:grid-cols-2 gap-10">
-            {[
-              { label: "Years Experience", number: 9, suffix: "+" },
-              { label: "Cars Serviced", number: 20000, suffix: "+" },
-            ].map((stat) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="border border-gray-700 rounded-xl p-8"
-              >
-                <Counter value={stat.number} suffix={stat.suffix} />
-
-                <p className="mt-3 text-gray-300">{stat.label}</p>
-              </motion.div>
-            ))}
+          <div>
+            <Counter value={20000} suffix="+" />
+            <p>Cars Serviced</p>
           </div>
         </div>
       </section>
