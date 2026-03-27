@@ -53,6 +53,30 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* VISION & MISSION */}
+      <section className="bg-gray-100 py-20 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+          <div className="bg-white p-8 rounded-xl shadow">
+            <h3 className="text-2xl font-semibold mb-4">Our Vision</h3>
+            <p className="text-gray-600">
+              To become the most trusted and preferred multi-brand car service
+              center in India by delivering consistent quality and innovation.
+            </p>
+          </div>
+
+          <div className="bg-white p-8 rounded-xl shadow">
+            <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
+            <ul className="list-disc pl-5 text-gray-600 space-y-2">
+              <li>Provide high-quality services</li>
+              <li>Maintain transparent pricing</li>
+              <li>Ensure quick turnaround time</li>
+              <li>Build long-term customer trust</li>
+              <li>Upgrade technology continuously</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* STATS SECTION */}
       <section className="bg-black text-white py-20 px-6 text-center">
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
@@ -96,30 +120,6 @@ export default function AboutPage() {
                 <p className="font-medium">{item}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* VISION & MISSION */}
-      <section className="bg-gray-100 py-20 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-          <div className="bg-white p-8 rounded-xl shadow">
-            <h3 className="text-2xl font-semibold mb-4">Our Vision</h3>
-            <p className="text-gray-600">
-              To become the most trusted and preferred multi-brand car service
-              center in India by delivering consistent quality and innovation.
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-xl shadow">
-            <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
-            <ul className="list-disc pl-5 text-gray-600 space-y-2">
-              <li>Provide high-quality services</li>
-              <li>Maintain transparent pricing</li>
-              <li>Ensure quick turnaround time</li>
-              <li>Build long-term customer trust</li>
-              <li>Upgrade technology continuously</li>
-            </ul>
           </div>
         </div>
       </section>
