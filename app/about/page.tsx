@@ -7,9 +7,9 @@ export default function AboutPage() {
     <main className="bg-gray-50">
       {/* HERO SECTION */}
       <section className="bg-black text-white py-24 px-6 text-center">
-        <h1 className="text-5xl font-bold">
+        {/* <h1 className="text-5xl font-bold">
           About <span className="text-red-600">One Stop Carz</span>
-        </h1>
+        </h1> */}
         <p className="mt-6 text-gray-300 max-w-2xl mx-auto">
           Your trusted multi-brand car workshop delivering premium service,
           transparency, and customer satisfaction.
