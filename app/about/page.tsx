@@ -41,13 +41,16 @@ export default function AboutPage() {
             </p>
 
             <p className="text-gray-600 mb-4">
-              With 11+ years of experience, we specialize in servicing,
-              denting-painting, insurance claims and detailing services.
+              We believe in building long-term relationships with our customers
+              by providing honest advice, fair pricing, and dependable service.
             </p>
 
             <p className="text-gray-600">
-              Our goal is to deliver dealership-level quality at competitive
-              pricing with fast turnaround time.
+              With 11 years of experience in the automobile industry, we are
+              committed to delivering high-quality service and complete customer
+              satisfaction. Our workshop is equipped with modern tools and
+              handled by trained professionals who understand the technical
+              requirements of all major car brands.
             </p>
           </div>
         </div>
