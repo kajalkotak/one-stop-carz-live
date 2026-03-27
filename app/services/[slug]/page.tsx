@@ -309,7 +309,7 @@ export default async function ServiceDetailPage({
 
         {/* PROCESS */}
 
-        <section className="mt-14">
+        {/* <section className="mt-14">
           <h2 className="text-2xl font-semibold mb-6">Our Process</h2>
 
           <div className="grid md:grid-cols-4 gap-6 text-center">
@@ -333,7 +333,91 @@ export default async function ServiceDetailPage({
               <p className="mt-2 font-medium">Final Delivery</p>
             </div>
           </div>
-        </section>
+        </section> */}
+
+        {service.slug === "mechanical-service" && (
+          <section className="mt-14">
+            <h2 className="text-2xl font-semibold mb-6">Our Process</h2>
+
+            <div className="grid md:grid-cols-4 gap-6 text-center">
+              <div className="border rounded-lg p-5">
+                <span className="text-red-600 font-bold text-xl">01</span>
+                <p className="mt-2 font-medium">Inspection</p>
+              </div>
+
+              <div className="border rounded-lg p-5">
+                <span className="text-red-600 font-bold text-xl">02</span>
+                <p className="mt-2 font-medium">Diagnosis</p>
+              </div>
+
+              <div className="border rounded-lg p-5">
+                <span className="text-red-600 font-bold text-xl">03</span>
+                <p className="mt-2 font-medium">Service / Repair</p>
+              </div>
+
+              <div className="border rounded-lg p-5">
+                <span className="text-red-600 font-bold text-xl">04</span>
+                <p className="mt-2 font-medium">Delivery</p>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {service.slug === "body-denting-painting" && (
+          <section className="mt-14">
+            <h2 className="text-2xl font-semibold mb-6">Our Process</h2>
+
+            <div className="grid md:grid-cols-4 gap-6 text-center">
+              <div className="border rounded-lg p-5">
+                <span className="text-red-600 font-bold text-xl">01</span>
+                <p className="mt-2 font-medium">Inspection</p>
+              </div>
+
+              <div className="border rounded-lg p-5">
+                <span className="text-red-600 font-bold text-xl">02</span>
+                <p className="mt-2 font-medium">Denting</p>
+              </div>
+
+              <div className="border rounded-lg p-5">
+                <span className="text-red-600 font-bold text-xl">03</span>
+                <p className="mt-2 font-medium">Painting</p>
+              </div>
+
+              <div className="border rounded-lg p-5">
+                <span className="text-red-600 font-bold text-xl">04</span>
+                <p className="mt-2 font-medium">Final Delivery</p>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {service.slug === "ceramic-coating" && (
+          <section className="mt-14">
+            <h2 className="text-2xl font-semibold mb-6">Our Process</h2>
+
+            <div className="grid md:grid-cols-4 gap-6 text-center">
+              <div className="border rounded-lg p-5">
+                <span className="text-red-600 font-bold text-xl">01</span>
+                <p className="mt-2 font-medium">Wash & Prep</p>
+              </div>
+
+              <div className="border rounded-lg p-5">
+                <span className="text-red-600 font-bold text-xl">02</span>
+                <p className="mt-2 font-medium">Surface Correction</p>
+              </div>
+
+              <div className="border rounded-lg p-5">
+                <span className="text-red-600 font-bold text-xl">03</span>
+                <p className="mt-2 font-medium">Coating Application</p>
+              </div>
+
+              <div className="border rounded-lg p-5">
+                <span className="text-red-600 font-bold text-xl">04</span>
+                <p className="mt-2 font-medium">Final Finish</p>
+              </div>
+            </div>
+          </section>
+        )}
       </div>
     </main>
   );
