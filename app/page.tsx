@@ -89,7 +89,7 @@ export default function Home() {
               "Insurance Claim",
               "Engine & Mechanical Repairs",
               "Car Detailing & Coating",
-              "Electrical & AC Work",
+              "Car Electrical & AC Work",
             ].map((item, i) => (
               <div key={i} className="bg-gray-50 p-6 rounded-lg shadow">
                 <p className="font-semibold">{item}</p>
