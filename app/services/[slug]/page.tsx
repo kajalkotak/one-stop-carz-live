@@ -278,28 +278,39 @@ export default async function ServiceDetailPage({
 
         {/* WHY CHOOSE */}
 
-        <section className="mt-14 bg-gray-50 p-8 rounded-xl">
-          <h2 className="text-2xl font-semibold mb-4">
-            Why Choose One Stop Carz
+        <section className="mt-16 bg-gradient-to-r from-gray-100 to-white p-10 rounded-2xl border border-gray-200 shadow-sm">
+          <h2 className="text-3xl font-bold text-center">
+            Why Choose <span className="text-red-600">One Stop Carz</span>
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6 text-center">
-            <div>
-              <h4 className="font-semibold">Expert Team</h4>
+          <p className="mt-3 text-center text-gray-600 max-w-2xl mx-auto">
+            We combine expertise, quality and transparency to deliver the best
+            car care experience.
+          </p>
+
+          <div className="mt-10 grid md:grid-cols-3 gap-8">
+            {/* CARD 1 */}
+            <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+              <div className="text-3xl mb-3">👨‍🔧</div>
+              <h4 className="font-semibold text-lg">Expert Team</h4>
               <p className="mt-2 text-gray-600">
                 Skilled technicians with years of hands-on experience.
               </p>
             </div>
 
-            <div>
-              <h4 className="font-semibold">Genuine Parts</h4>
+            {/* CARD 2 */}
+            <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+              <div className="text-3xl mb-3">🔩</div>
+              <h4 className="font-semibold text-lg">Genuine Parts</h4>
               <p className="mt-2 text-gray-600">
                 Only trusted OEM or equivalent components used.
               </p>
             </div>
 
-            <div>
-              <h4 className="font-semibold">Customer First</h4>
+            {/* CARD 3 */}
+            <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+              <div className="text-3xl mb-3">🤝</div>
+              <h4 className="font-semibold text-lg">Customer First</h4>
               <p className="mt-2 text-gray-600">
                 Clear communication and honest recommendations.
               </p>
