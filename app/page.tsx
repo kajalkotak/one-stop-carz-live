@@ -22,7 +22,6 @@ export default function Home() {
       {/* 🔥 HERO */}
       <section className="bg-gradient-to-r from-gray-900 to-black text-white py-24 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          
           <div>
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
               Accident? Service Due?{" "}
@@ -31,19 +30,22 @@ export default function Home() {
             </h1>
 
             <p className="mt-6 text-lg text-gray-300 max-w-xl">
-              Premium Car Care | Accident Repair | Insurance Claim Assistance | Detailing
+              Premium Car Care | Accident Repair | Insurance Claim Assistance |
+              Detailing
             </p>
 
             <p className="mt-4 text-gray-400 max-w-xl">
-              We provide end-to-end automotive solutions with a focus on quality,
-              transparency, and customer satisfaction. From routine servicing to
-              complete accident repairs & detailing services, your car is in expert hands.
+              We provide end-to-end automotive solutions with a focus on
+              quality, transparency, and customer satisfaction. From routine
+              servicing to complete accident repairs & detailing services, your
+              car is in expert hands.
             </p>
 
             <p className="mt-3 text-gray-400 max-w-xl">
               At One Stop Carz, we specialize in multi-brand car servicing,
-              denting-painting, insurance claim support and detailing. Our goal is to
-              deliver dealership-level quality at competitive pricing with fast turnaround time.
+              denting-painting, insurance claim support and detailing. Our goal
+              is to deliver dealership-level quality at competitive pricing with
+              fast turnaround time.
             </p>
 
             <div className="mt-8 flex gap-5 flex-wrap">
@@ -73,9 +75,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 🔥 BRAND SLIDER */}
-      <BrandSlider customBrands={[...defaultBrands, ...extraBrands]} />
-
       {/* 🔥 CORE SERVICES */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto text-center">
@@ -101,75 +100,71 @@ export default function Home() {
       </section>
 
       {/* 🔥 SERVICES */}
-<section className="py-20 px-6 bg-gray-50">
-  <div className="max-w-7xl mx-auto text-center">
-    <h2 className="text-4xl font-bold">
-      Our <span className="text-red-600">Services</span>
-    </h2>
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl font-bold">
+            Our <span className="text-red-600">Services</span>
+          </h2>
 
-    <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-      Complete car care solutions designed for performance, safety and appearance.
-    </p>
+          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+            Complete car care solutions designed for performance, safety and
+            appearance.
+          </p>
 
-    <div className="mt-14 grid md:grid-cols-3 gap-8">
-      
-      {/* SERVICE 1 */}
-      <div className="bg-white p-8 rounded-xl shadow hover:shadow-xl transition">
-        <h3 className="text-2xl font-semibold">
-          Mechanical Service
-        </h3>
+          <div className="mt-14 grid md:grid-cols-3 gap-8">
+            {/* SERVICE 1 */}
+            <div className="bg-white p-8 rounded-xl shadow hover:shadow-xl transition">
+              <h3 className="text-2xl font-semibold">Mechanical Service</h3>
 
-        <p className="mt-4 text-gray-600">
-          Complete engine diagnostics, maintenance and repair services to keep your car running smoothly.
-        </p>
+              <p className="mt-4 text-gray-600">
+                Complete engine diagnostics, maintenance and repair services to
+                keep your car running smoothly.
+              </p>
 
-        <Link
-          href="/services/mechanical-service"
-          className="mt-6 inline-block bg-red-600 text-white px-6 py-2 rounded-md"
-        >
-          View Details
-        </Link>
-      </div>
+              <Link
+                href="/services/mechanical-service"
+                className="mt-6 inline-block bg-red-600 text-white px-6 py-2 rounded-md"
+              >
+                View Details
+              </Link>
+            </div>
 
-      {/* SERVICE 2 */}
-      <div className="bg-white p-8 rounded-xl shadow hover:shadow-xl transition border-2 border-red-600">
-        <h3 className="text-2xl font-semibold">
-          Denting & Painting
-        </h3>
+            {/* SERVICE 2 */}
+            <div className="bg-white p-8 rounded-xl shadow hover:shadow-xl transition border-2 border-red-600">
+              <h3 className="text-2xl font-semibold">Denting & Painting</h3>
 
-        <p className="mt-4 text-gray-600">
-          Professional accident repair, dent removal and 100% color match painting services.
-        </p>
+              <p className="mt-4 text-gray-600">
+                Professional accident repair, dent removal and 100% color match
+                painting services.
+              </p>
 
-        <Link
-          href="/services/body-denting-painting"
-          className="mt-6 inline-block bg-red-600 text-white px-6 py-2 rounded-md"
-        >
-          View Details
-        </Link>
-      </div>
+              <Link
+                href="/services/body-denting-painting"
+                className="mt-6 inline-block bg-red-600 text-white px-6 py-2 rounded-md"
+              >
+                View Details
+              </Link>
+            </div>
 
-      {/* SERVICE 3 */}
-      <div className="bg-white p-8 rounded-xl shadow hover:shadow-xl transition">
-        <h3 className="text-2xl font-semibold">
-          Car Detailing
-        </h3>
+            {/* SERVICE 3 */}
+            <div className="bg-white p-8 rounded-xl shadow hover:shadow-xl transition">
+              <h3 className="text-2xl font-semibold">Car Detailing</h3>
 
-        <p className="mt-4 text-gray-600">
-          Premium detailing services including ceramic coating, polishing and complete car beautification.
-        </p>
+              <p className="mt-4 text-gray-600">
+                Premium detailing services including ceramic coating, polishing
+                and complete car beautification.
+              </p>
 
-        <Link
-          href="/services/ceramic-coating"
-          className="mt-6 inline-block bg-red-600 text-white px-6 py-2 rounded-md"
-        >
-          View Details
-        </Link>
-      </div>
-
-    </div>
-  </div>
-</section>
+              <Link
+                href="/services/ceramic-coating"
+                className="mt-6 inline-block bg-red-600 text-white px-6 py-2 rounded-md"
+              >
+                View Details
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* 🔥 WHY CHOOSE */}
       <section className="bg-white py-20 px-6">
@@ -205,9 +200,7 @@ export default function Home() {
           Need Urgent Repair or Insurance Claim?
         </h2>
 
-        <p className="mt-4">
-          Call Now: 9624702104 / 9624702103 / 9624702102
-        </p>
+        <p className="mt-4">Call Now: 9624702104 / 9624702103 / 9624702102</p>
 
         <a
           href="https://wa.me/919624702104"
@@ -232,9 +225,7 @@ export default function Home() {
               >
                 <h3 className="text-xl font-semibold">{item.title}</h3>
 
-                <p className="mt-3 text-gray-600 flex-grow">
-                  {item.shortDesc}
-                </p>
+                <p className="mt-3 text-gray-600 flex-grow">{item.shortDesc}</p>
 
                 <Link
                   href={`/offers/${item.slug}`}
@@ -247,6 +238,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* 🔥 BRAND SLIDER */}
+      <BrandSlider customBrands={[...defaultBrands, ...extraBrands]} />
 
       <GoogleReviews />
 
