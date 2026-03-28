@@ -277,7 +277,7 @@ export default function Home() {
       <GoogleReviews />
 
       {/* 🔥 STATS */}
-      <section className="bg-black py-24 px-6 text-white text-center">
+      <section className="bg-black py-15 px-6 text-white text-center">
         <h2 className="text-4xl font-bold">
           Trusted by <span className="text-red-600">Thousands</span>
         </h2>
