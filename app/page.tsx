@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
       {/* 🔥 SERVICES */}
-      <section className="py-20 px-6 bg-gray-50">
+      {/* <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl font-bold">
             Our <span className="text-red-600">Services</span>
@@ -128,9 +128,9 @@ export default function Home() {
             appearance.
           </p>
 
-          <div className="mt-14 grid md:grid-cols-3 gap-8">
-            {/* SERVICE 1 */}
-            <div className="bg-white p-8 rounded-xl shadow hover:shadow-xl transition">
+          <div className="mt-14 grid md:grid-cols-3 gap-8"> */}
+      {/* SERVICE 1 */}
+      {/* <div className="bg-white p-8 rounded-xl shadow hover:shadow-xl transition">
               <h3 className="text-2xl font-semibold">Mechanical Service</h3>
 
               <p className="mt-4 text-gray-600">
@@ -144,10 +144,10 @@ export default function Home() {
               >
                 View Details
               </Link>
-            </div>
+            </div> */}
 
-            {/* SERVICE 2 */}
-            <div className="bg-white p-8 rounded-xl shadow hover:shadow-xl transition border-2 border-red-600">
+      {/* SERVICE 2 */}
+      {/* <div className="bg-white p-8 rounded-xl shadow hover:shadow-xl transition border-2 border-red-600">
               <h3 className="text-2xl font-semibold">Denting & Painting</h3>
 
               <p className="mt-4 text-gray-600">
@@ -161,10 +161,10 @@ export default function Home() {
               >
                 View Details
               </Link>
-            </div>
+            </div> */}
 
-            {/* SERVICE 3 */}
-            <div className="bg-white p-8 rounded-xl shadow hover:shadow-xl transition">
+      {/* SERVICE 3 */}
+      {/* <div className="bg-white p-8 rounded-xl shadow hover:shadow-xl transition">
               <h3 className="text-2xl font-semibold">Car Detailing</h3>
 
               <p className="mt-4 text-gray-600">
@@ -181,30 +181,45 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 🔥 WHY CHOOSE */}
-      <section className="bg-white py-20 px-6">
+      <section className="bg-gradient-to-b from-white to-gray-100 py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl font-bold">
             Why Choose <span className="text-red-600">Us</span>
           </h2>
 
-          <div className="mt-12 grid md:grid-cols-4 gap-6">
+          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+            Trusted by thousands of car owners for quality service, transparent
+            pricing and expert care.
+          </p>
+
+          <div className="mt-14 grid md:grid-cols-4 gap-8">
             {[
-              "Save up to 30% vs Authorized Service Center",
-              "Experienced & Well Educated Technicians",
-              "Genuine Spare Parts",
-              "Quick Turnaround Time",
-              "Insurance Claim Support",
-              "Customer First Approach",
-              "100% Color Match Guarantee",
-              "Hassle Free Service",
-              "Transparent Pricing",
-              "Accuracy of Overall Work",
+              {
+                text: "Save up to 30% vs Authorized Service Center",
+                icon: "💰",
+              },
+              { text: "Experienced & Well Educated Technicians", icon: "👨‍🔧" },
+              { text: "Genuine Spare Parts", icon: "🔩" },
+              { text: "Quick Turnaround Time", icon: "⚡" },
+              { text: "Insurance Claim Support", icon: "📄" },
+              { text: "Customer First Approach", icon: "🤝" },
+              { text: "100% Color Match Guarantee", icon: "🎨" },
+              { text: "Hassle Free Service", icon: "✅" },
+              { text: "Transparent Pricing", icon: "📊" },
+              { text: "Accuracy of Overall Work", icon: "🎯" },
             ].map((item, i) => (
-              <div key={i} className="bg-gray-50 p-6 rounded-xl shadow">
-                <p className="font-semibold">{item}</p>
+              <div
+                key={i}
+                className="bg-white p-6 rounded-xl shadow-md border border-red-200 hover:shadow-xl hover:-translate-y-1 transition duration-300"
+              >
+                {/* ICON */}
+                <div className="text-3xl mb-3">{item.icon}</div>
+
+                {/* TEXT */}
+                <p className="font-semibold text-gray-800">{item.text}</p>
               </div>
             ))}
           </div>
