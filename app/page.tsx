@@ -76,23 +76,40 @@ export default function Home() {
       </section>
 
       {/* 🔥 CORE SERVICES */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-gradient-to-b from-white to-gray-100">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl font-bold">
             Our <span className="text-red-600">Core Services</span>
           </h2>
 
-          <div className="mt-12 grid md:grid-cols-3 gap-6">
+          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+            Complete automotive solutions designed for performance, safety and
+            premium care.
+          </p>
+
+          <div className="mt-14 grid md:grid-cols-3 gap-8">
             {[
-              "Car Service & Maintenance",
-              "Denting Painting (Accident Repair)",
-              "Insurance Claim",
-              "Engine & Mechanical Repairs",
-              "Car Detailing & Coating",
-              "Car Electrical & AC Work",
+              { title: "Car Service & Maintenance", icon: "🔧" },
+              { title: "Denting Painting (Accident Repair)", icon: "🎨" },
+              { title: "Insurance Claim", icon: "📄" },
+              { title: "Engine & Mechanical Repairs", icon: "⚙️" },
+              { title: "Car Detailing & Coating", icon: "✨" },
+              { title: "Car Electrical & AC Work", icon: "❄️" },
             ].map((item, i) => (
-              <div key={i} className="bg-gray-50 p-6 rounded-lg shadow">
-                <p className="font-semibold">{item}</p>
+              <div
+                key={i}
+                className="bg-white p-8 rounded-2xl shadow-md border border-red-200 ring-1 ring-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 group"
+              >
+                {/* ICON */}
+                <div className="text-4xl mb-4 group-hover:scale-110 transition">
+                  {item.icon}
+                </div>
+
+                {/* TITLE */}
+                <p className="font-semibold text-lg">{item.title}</p>
+
+                {/* UNDERLINE EFFECT */}
+                <div className="mt-3 w-10 h-1 bg-red-600 mx-auto rounded group-hover:w-16 transition-all duration-300"></div>
               </div>
             ))}
           </div>
