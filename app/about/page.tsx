@@ -91,7 +91,7 @@ export default function AboutPage() {
       </section>
 
       {/* STATS SECTION */}
-      <section className="bg-black text-white py-20 px-6 text-center">
+      {/* <section className="bg-black text-white py-20 px-6 text-center">
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-4xl font-bold text-red-600">11+</h3>
@@ -108,7 +108,7 @@ export default function AboutPage() {
             <p className="mt-2 text-gray-300">Customer Satisfaction</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* WHY CHOOSE US */}
       <section className="py-20 px-6">
