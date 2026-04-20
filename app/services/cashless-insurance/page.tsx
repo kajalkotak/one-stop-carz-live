@@ -3,6 +3,22 @@
 import Link from "next/link";
 
 export default function CashlessInsurancePage() {
+  const companies = [
+    { name: "Bajaj Allianz", image: "image1.png" },
+    { name: "IFFCO Tokio", image: "image2.png" },
+    { name: "United India Insurance", image: "image3.png" },
+    { name: "National Insurance", image: "image4.png" },
+    { name: "Future Generali", image: "image5.png" },
+    { name: "Liberty Insurance", image: "image6.png" },
+    { name: "Universal Sompo", image: "image7.png" },
+    { name: "Chola MS", image: "image8.png" },
+    { name: "ICICI Lombard", image: "image9.png" },
+    { name: "Go Digit", image: "image10.png" },
+    { name: "New India Assurance", image: "image11.png" },
+    { name: "HDFC ERGO", image: "image12.png" },
+    { name: "TATA AIG", image: "image13.png" },
+  ];
+
   return (
     <main className="min-h-screen bg-gray-50 px-6 py-20">
       <div className="max-w-6xl mx-auto bg-white rounded-xl shadow p-10">
@@ -23,17 +39,19 @@ export default function CashlessInsurancePage() {
           </h2>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {Array.from({ length: 13 }).map((_, i) => (
-              <div
+            {companies.map((company, i) => (
+              <Link
                 key={i}
-                className="border rounded-lg p-4 flex justify-center items-center bg-white hover:shadow transition"
+                href={`/insurance-claim?company=${encodeURIComponent(company.name)}`}
               >
-                <img
-                  src={`/insurance/image${i + 1}.png`}
-                  alt="insurance"
-                  className="h-16 object-contain"
-                />
-              </div>
+                <div className="border rounded-lg p-4 flex justify-center items-center bg-white hover:shadow hover:scale-105 transition cursor-pointer">
+                  <img
+                    src={`/insurance/${company.image}`}
+                    alt={company.name}
+                    className="h-16 object-contain"
+                  />
+                </div>
+              </Link>
             ))}
           </div>
 
@@ -79,45 +97,23 @@ export default function CashlessInsurancePage() {
           </h2>
 
           <div className="grid md:grid-cols-4 gap-6 text-center">
-            <div className="border rounded-lg p-5">
-              <span className="text-red-600 font-bold text-xl">01</span>
-              <p className="mt-2 font-medium">BOOKING</p>
-            </div>
-
-            <div className="border rounded-lg p-5">
-              <span className="text-red-600 font-bold text-xl">02</span>
-              <p className="mt-2 font-medium">CLAIM INTIMATION</p>
-            </div>
-
-            <div className="border rounded-lg p-5">
-              <span className="text-red-600 font-bold text-xl">03</span>
-              <p className="mt-2 font-medium">SURVEY (FI)</p>
-            </div>
-
-            <div className="border rounded-lg p-5">
-              <span className="text-red-600 font-bold text-xl">04</span>
-              <p className="mt-2 font-medium">PARTS ORDER</p>
-            </div>
-
-            <div className="border rounded-lg p-5">
-              <span className="text-red-600 font-bold text-xl">05</span>
-              <p className="mt-2 font-medium">DENTING</p>
-            </div>
-
-            <div className="border rounded-lg p-5">
-              <span className="text-red-600 font-bold text-xl">06</span>
-              <p className="mt-2 font-medium">PAINTING</p>
-            </div>
-
-            <div className="border rounded-lg p-5">
-              <span className="text-red-600 font-bold text-xl">07</span>
-              <p className="mt-2 font-medium">FINAL INSPECTION</p>
-            </div>
-
-            <div className="border rounded-lg p-5">
-              <span className="text-red-600 font-bold text-xl">08</span>
-              <p className="mt-2 font-medium">DELIVERY</p>
-            </div>
+            {[
+              "BOOKING",
+              "CLAIM INTIMATION",
+              "SURVEY (FI)",
+              "PARTS ORDER",
+              "DENTING",
+              "PAINTING",
+              "FINAL INSPECTION",
+              "DELIVERY",
+            ].map((step, i) => (
+              <div key={i} className="border rounded-lg p-5">
+                <span className="text-red-600 font-bold text-xl">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="mt-2 font-medium">{step}</p>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -125,7 +121,7 @@ export default function CashlessInsurancePage() {
         <div className="mt-12 text-center">
           <Link
             href="/services/body-denting-painting"
-            className="inline-block bg-red-600 text-white px-6 py-3 rounded-md"
+            className="inline-block bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700 transition"
           >
             Back to Service
           </Link>
