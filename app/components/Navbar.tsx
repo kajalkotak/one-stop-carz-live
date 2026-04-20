@@ -61,10 +61,10 @@ export default function Navbar() {
             Service
           </Link>
           <Link
-            href="/booking"
+            href="/career"
             className="hover:text-red-500 transition-colors duration-200"
           >
-            Booking
+            Career
           </Link>
           <Link
             href="/contact"
