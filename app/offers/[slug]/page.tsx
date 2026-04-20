@@ -73,7 +73,11 @@ export default async function OfferDetailPage({
               className="w-full rounded-xl object-contain"
               priority
             /> */}
-            <img src={poster} alt={item.title} className="w-full rounded-xl" />
+            <img
+              src={poster}
+              alt={item.title}
+              className="w-[85%] sm:w-[70%] md:w-[60%] mx-auto rounded-xl object-contain"
+            />
           </div>
         )}
 
