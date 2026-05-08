@@ -22,7 +22,7 @@ export default function AboutPage() {
           {/* IMAGE */}
           <div>
             <img
-              src="/about/workshop.jpg"
+              src="/about/workshop.jpeg"
               alt="Workshop"
               className="rounded-xl shadow-lg"
             />
