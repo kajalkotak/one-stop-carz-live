@@ -97,28 +97,28 @@ export const packages: PackageItem[] = [
     ],
   },
 
-    // {
-    //   slug: "ceramic-coating-offer",
-    //   category: "package",
-    //   title: "Ceramic Coating Offer",
-    //   subtitle: "Limited Time Premium Protection",
-    //   actualPrice: 16500,
-    //   offerPrice: 9999,
-    //   shortDesc:
-    //     "Premium ceramic coating for any make & model with Elite Care membership and protection combo absolutely free.",
-    //   description:
-    //     "One Stop Carz Vadodara brings a limited-time Ceramic Coating offer at just ₹9,999 + GST for any car size or model. Includes a FREE 3 Year Elite Care Membership worth ₹6000 and a Complete Protection Combo (Glass, Headlight & Engine coating) worth ₹3500.",
-    //   includes: [
-    //     "Premium Ceramic Coating",
-    //     "3 Year Elite Care Membership (FREE)",
-    //     "Glass Coating (FREE)",
-    //     "Headlight Coating (FREE)",
-    //     "Engine Coating (FREE)",
-    //     "Mirror Finish Gloss",
-    //     "UV Protection",
-    //     "Hydrophobic Water Repellency",
-    //   ],
-    // },
+  {
+    slug: "ceramic-coating-offer",
+    category: "package",
+    title: "Ceramic Coating Offer",
+    subtitle: "Limited Time Premium Protection",
+    actualPrice: 16500,
+    offerPrice: 9999,
+    shortDesc:
+      "Premium ceramic coating for any make & model with Elite Care membership and protection combo absolutely free.",
+    description:
+      "One Stop Carz Vadodara brings a limited-time Ceramic Coating offer at just ₹9,999 + GST for any car size or model. Includes a FREE 3 Year Elite Care Membership worth ₹6000 and a Complete Protection Combo (Glass, Headlight & Engine coating) worth ₹3500.",
+    includes: [
+      "Premium Ceramic Coating",
+      "3 Year Elite Care Membership (FREE)",
+      "Glass Coating (FREE)",
+      "Headlight Coating (FREE)",
+      "Engine Coating (FREE)",
+      "Mirror Finish Gloss",
+      "UV Protection",
+      "Hydrophobic Water Repellency",
+    ],
+  },
 
   // ================= AMC =================
 

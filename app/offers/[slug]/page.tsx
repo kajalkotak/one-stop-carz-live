@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { packages } from "@/app/data/packages";
 
 /* ----------------------------------
@@ -65,14 +64,6 @@ export default async function OfferDetailPage({
 
         {poster && (
           <div className="my-10">
-            {/* <Image
-              src={poster}
-              alt={item.title}
-              width={1200}
-              height={1600}
-              className="w-full rounded-xl object-contain"
-              priority
-            /> */}
             <img
               src={poster}
               alt={item.title}
@@ -138,6 +129,7 @@ export default async function OfferDetailPage({
 
         <div className="mt-10">
           <h2 className="text-2xl font-semibold">Package Details</h2>
+
           <p className="mt-3 text-gray-700">{item.description}</p>
         </div>
 
@@ -150,6 +142,59 @@ export default async function OfferDetailPage({
             ))}
           </ul>
         </div>
+
+        {/* DETAILING CARDS INSIDE CERAMIC PAGE */}
+
+        {item.slug === "ceramic-coating-offer" && (
+          <div className="mt-14">
+            <h2 className="text-3xl font-bold text-center">
+              Premium <span className="text-red-600">Detailing Offers</span>
+            </h2>
+
+            <p className="mt-3 text-center text-gray-600">
+              Choose from our premium ceramic coating solutions.
+            </p>
+
+            <div className="mt-10 grid md:grid-cols-2 gap-8">
+              {packages
+                .filter((pkg) => pkg.slug === "3m" || pkg.slug === "vista")
+                .map((pkg) => (
+                  <div
+                    key={pkg.slug}
+                    className="border rounded-xl p-6 shadow-sm hover:shadow-lg transition"
+                  >
+                    <img
+                      src={`/detailing/${pkg.slug}.png`}
+                      alt={pkg.title}
+                      className="w-full h-64 object-contain rounded-lg"
+                    />
+
+                    <h3 className="mt-5 text-2xl font-bold">{pkg.title}</h3>
+
+                    <p className="mt-3 text-gray-600">{pkg.shortDesc}</p>
+
+                    <div className="mt-5">
+                      <p className="text-sm line-through text-gray-400">
+                        ₹{pkg.actualPrice} +GST
+                      </p>
+
+                      <p className="text-3xl font-bold text-red-600">
+                        ₹{pkg.offerPrice}
+                        <span className="text-sm text-gray-500 ml-2">+GST</span>
+                      </p>
+                    </div>
+
+                    <Link
+                      href={`/offers/${pkg.slug}`}
+                      className="inline-block mt-6 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-semibold"
+                    >
+                      View Details
+                    </Link>
+                  </div>
+                ))}
+            </div>
+          </div>
+        )}
 
         <div className="mt-10 flex gap-4 flex-wrap">
           <Link
