@@ -299,7 +299,7 @@ export default async function OfferDetailPage({
                       ₹{pkg.actualPrice} +GST
                     </p>
 
-                    <p className="text-5xl font-bold text-red-600">
+                    <p className="text-3xl font-bold text-red-600">
                       ₹{pkg.offerPrice}
                       <span className="text-lg text-gray-500 ml-2">+GST</span>
                     </p>
