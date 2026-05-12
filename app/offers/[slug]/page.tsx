@@ -141,10 +141,26 @@ export default async function OfferDetailPage({
               <li key={idx}>{point}</li>
             ))}
           </ul>
+
+          <div className="mt-10 flex gap-4 flex-wrap">
+            <Link
+              href={`/booking?service=${encodeURIComponent(item.title)}`}
+              className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-semibold"
+            >
+              Book Now
+            </Link>
+
+            <Link
+              href="/offers"
+              className="border border-gray-300 px-6 py-3 rounded-md font-semibold hover:bg-gray-100"
+            >
+              Back to Offers
+            </Link>
+          </div>
         </div>
 
         {/* DETAILING CARDS INSIDE CERAMIC PAGE */}
-
+        {/* 
         {item.slug === "ceramic-coating-offer" && (
           <div className="mt-14">
             <h2 className="text-3xl font-bold text-center">
@@ -194,23 +210,125 @@ export default async function OfferDetailPage({
                 ))}
             </div>
           </div>
+        )} */}
+
+        {/* FULL 3M + VISTA DETAILS */}
+
+        {item.slug === "ceramic-coating-offer" && (
+          <div className="mt-16 space-y-24">
+            {/* 3M DETAILS */}
+
+            {/* {packages
+              .filter((pkg) => pkg.slug === "3m")
+              .map((pkg) => (
+                <div
+                  key={pkg.slug}
+                  className="border rounded-2xl p-8 shadow-sm"
+                >
+                  <img
+                    src={`/detailing/${pkg.slug}.png`}
+                    alt={pkg.title}
+                    className="w-full max-w-2xl mx-auto rounded-xl object-contain"
+                  />
+
+                  <h2 className="mt-8 text-4xl font-bold">{pkg.title}</h2>
+
+                  <p className="mt-4 text-gray-600 text-lg">
+                    {pkg.description}
+                  </p>
+
+                  <div className="mt-6">
+                    <p className="text-gray-400 line-through text-xl">
+                      ₹{pkg.actualPrice} +GST
+                    </p>
+
+                    <p className="text-5xl font-bold text-red-600">
+                      ₹{pkg.offerPrice}
+                      <span className="text-lg text-gray-500 ml-2">+GST</span>
+                    </p>
+                  </div>
+
+                  <ul className="mt-8 grid md:grid-cols-2 gap-3 list-disc pl-6 text-gray-700">
+                    {pkg.includes.map((point, idx) => (
+                      <li key={idx}>{point}</li>
+                    ))}
+                  </ul>
+
+                  <div className="mt-10 flex gap-4 flex-wrap">
+                    <Link
+                      href={`/booking?service=${encodeURIComponent(pkg.title)}`}
+                      className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-semibold"
+                    >
+                      Book Now
+                    </Link>
+
+                    <Link
+                      href="/offers"
+                      className="border border-gray-300 px-6 py-3 rounded-md font-semibold hover:bg-gray-100"
+                    >
+                      Back to Offers
+                    </Link>
+                  </div>
+                </div>
+              ))} */}
+
+            {/* VISTA DETAILS */}
+
+            {packages
+              .filter((pkg) => pkg.slug === "vista")
+              .map((pkg) => (
+                <div
+                  key={pkg.slug}
+                  className="border rounded-2xl p-8 shadow-sm"
+                >
+                  <img
+                    src={`/detailing/${pkg.slug}.png`}
+                    alt={pkg.title}
+                    className="w-full max-w-2xl mx-auto rounded-xl object-contain"
+                  />
+
+                  <h2 className="mt-8 text-4xl font-bold">{pkg.title}</h2>
+
+                  <p className="mt-4 text-gray-600 text-lg">
+                    {pkg.description}
+                  </p>
+
+                  <div className="mt-6">
+                    <p className="text-gray-400 line-through text-xl">
+                      ₹{pkg.actualPrice} +GST
+                    </p>
+
+                    <p className="text-5xl font-bold text-red-600">
+                      ₹{pkg.offerPrice}
+                      <span className="text-lg text-gray-500 ml-2">+GST</span>
+                    </p>
+                  </div>
+
+                  <ul className="mt-8 grid md:grid-cols-2 gap-3 list-disc pl-6 text-gray-700">
+                    {pkg.includes.map((point, idx) => (
+                      <li key={idx}>{point}</li>
+                    ))}
+                  </ul>
+
+                  <div className="mt-10 flex gap-4 flex-wrap">
+                    <Link
+                      href={`/booking?service=${encodeURIComponent(pkg.title)}`}
+                      className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-semibold"
+                    >
+                      Book Now
+                    </Link>
+
+                    <Link
+                      href="/offers"
+                      className="border border-gray-300 px-6 py-3 rounded-md font-semibold hover:bg-gray-100"
+                    >
+                      Back to Offers
+                    </Link>
+                  </div>
+                </div>
+              ))}
+          </div>
         )}
-
-        <div className="mt-10 flex gap-4 flex-wrap">
-          <Link
-            href={`/booking?service=${encodeURIComponent(item.title)}`}
-            className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-semibold"
-          >
-            Book Now
-          </Link>
-
-          <Link
-            href="/offers"
-            className="border border-gray-300 px-6 py-3 rounded-md font-semibold hover:bg-gray-100"
-          >
-            Back to Offers
-          </Link>
-        </div>
       </div>
     </main>
   );
