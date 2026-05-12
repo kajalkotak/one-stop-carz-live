@@ -55,107 +55,109 @@ export default async function OfferDetailPage({
 
   return (
     <main className="min-h-screen bg-gray-50 px-6 py-20">
-      <div className="max-w-5xl mx-auto bg-white p-10 rounded-xl shadow">
-        <h1 className="text-4xl font-bold">{item.title}</h1>
+      <div className="max-w-5xl mx-auto bg-white p-10 rounded-xl shadow ">
+        <div className="border rounded-2xl p-5 shadow-sm">
+          <h1 className="text-4xl font-bold">{item.title}</h1>
 
-        {item.subtitle && (
-          <p className="mt-2 text-gray-500 text-lg">{item.subtitle}</p>
-        )}
+          {item.subtitle && (
+            <p className="mt-2 text-gray-500 text-lg">{item.subtitle}</p>
+          )}
 
-        {poster && (
-          <div className="my-10">
-            <img
-              src={poster}
-              alt={item.title}
-              className="w-[85%] sm:w-[70%] md:w-[60%] mx-auto rounded-xl object-contain"
-            />
+          {poster && (
+            <div className="my-10">
+              <img
+                src={poster}
+                alt={item.title}
+                className="w-[85%] sm:w-[70%] md:w-[60%] mx-auto rounded-xl object-contain"
+              />
+            </div>
+          )}
+
+          <p className="mt-4 text-gray-700">{item.shortDesc}</p>
+
+          <div className="mt-8  p-6 bg-gray-50">
+            {item.actualPrice && (
+              <>
+                <p className="text-sm line-through text-gray-400">
+                  ₹{item.actualPrice} +GST
+                </p>
+
+                {item.offerPrice && (
+                  <p className="text-3xl font-bold text-red-600">
+                    ₹{item.offerPrice}{" "}
+                    <span className="text-sm text-gray-500">+GST</span>
+                  </p>
+                )}
+              </>
+            )}
+
+            {item.petrolOfferPrice && (
+              <div className="mt-4">
+                {item.petrolActualPrice && (
+                  <p className="text-sm line-through text-gray-400">
+                    Petrol: ₹{item.petrolActualPrice} +GST
+                  </p>
+                )}
+
+                <p className="text-xl font-semibold text-red-600">
+                  Petrol: ₹{item.petrolOfferPrice}
+                  <span className="text-sm text-gray-500 ml-2">+GST</span>
+                </p>
+              </div>
+            )}
+
+            {item.dieselOfferPrice && (
+              <div className="mt-2">
+                {item.dieselActualPrice && (
+                  <p className="text-sm line-through text-gray-400">
+                    Diesel: ₹{item.dieselActualPrice} +GST
+                  </p>
+                )}
+
+                <p className="text-xl font-semibold text-red-600">
+                  Diesel: ₹{item.dieselOfferPrice}
+                  <span className="text-sm text-gray-500 ml-2">+GST</span>
+                </p>
+              </div>
+            )}
+
+            {item.duration && (
+              <p className="mt-3 text-sm text-gray-600">
+                Duration: {item.duration}
+              </p>
+            )}
           </div>
-        )}
 
-        <p className="mt-4 text-gray-700">{item.shortDesc}</p>
+          <div className="mt-10">
+            <h2 className="text-2xl font-semibold">Package Details</h2>
 
-        <div className="mt-8 border rounded-lg p-6 bg-gray-50">
-          {item.actualPrice && (
-            <>
-              <p className="text-sm line-through text-gray-400">
-                ₹{item.actualPrice} +GST
-              </p>
+            <p className="mt-3 text-gray-700">{item.description}</p>
+          </div>
 
-              {item.offerPrice && (
-                <p className="text-3xl font-bold text-red-600">
-                  ₹{item.offerPrice}{" "}
-                  <span className="text-sm text-gray-500">+GST</span>
-                </p>
-              )}
-            </>
-          )}
+          <div className="mt-8">
+            <h3 className="text-xl font-semibold">What’s Included</h3>
 
-          {item.petrolOfferPrice && (
-            <div className="mt-4">
-              {item.petrolActualPrice && (
-                <p className="text-sm line-through text-gray-400">
-                  Petrol: ₹{item.petrolActualPrice} +GST
-                </p>
-              )}
+            <ul className="mt-4 grid md:grid-cols-2 gap-3 list-disc pl-6 text-gray-700">
+              {item.includes.map((point, idx) => (
+                <li key={idx}>{point}</li>
+              ))}
+            </ul>
 
-              <p className="text-xl font-semibold text-red-600">
-                Petrol: ₹{item.petrolOfferPrice}
-                <span className="text-sm text-gray-500 ml-2">+GST</span>
-              </p>
+            <div className="mt-10 flex gap-4 flex-wrap">
+              <Link
+                href={`/booking?service=${encodeURIComponent(item.title)}`}
+                className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-semibold"
+              >
+                Book Now
+              </Link>
+
+              <Link
+                href="/offers"
+                className="border border-gray-300 px-6 py-3 rounded-md font-semibold hover:bg-gray-100"
+              >
+                Back to Offers
+              </Link>
             </div>
-          )}
-
-          {item.dieselOfferPrice && (
-            <div className="mt-2">
-              {item.dieselActualPrice && (
-                <p className="text-sm line-through text-gray-400">
-                  Diesel: ₹{item.dieselActualPrice} +GST
-                </p>
-              )}
-
-              <p className="text-xl font-semibold text-red-600">
-                Diesel: ₹{item.dieselOfferPrice}
-                <span className="text-sm text-gray-500 ml-2">+GST</span>
-              </p>
-            </div>
-          )}
-
-          {item.duration && (
-            <p className="mt-3 text-sm text-gray-600">
-              Duration: {item.duration}
-            </p>
-          )}
-        </div>
-
-        <div className="mt-10">
-          <h2 className="text-2xl font-semibold">Package Details</h2>
-
-          <p className="mt-3 text-gray-700">{item.description}</p>
-        </div>
-
-        <div className="mt-8">
-          <h3 className="text-xl font-semibold">What’s Included</h3>
-
-          <ul className="mt-4 grid md:grid-cols-2 gap-3 list-disc pl-6 text-gray-700">
-            {item.includes.map((point, idx) => (
-              <li key={idx}>{point}</li>
-            ))}
-          </ul>
-
-          <div className="mt-10 flex gap-4 flex-wrap">
-            <Link
-              href={`/booking?service=${encodeURIComponent(item.title)}`}
-              className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-semibold"
-            >
-              Book Now
-            </Link>
-
-            <Link
-              href="/offers"
-              className="border border-gray-300 px-6 py-3 rounded-md font-semibold hover:bg-gray-100"
-            >
-              Back to Offers
-            </Link>
           </div>
         </div>
 
@@ -279,15 +281,14 @@ export default async function OfferDetailPage({
               .map((pkg) => (
                 <div
                   key={pkg.slug}
-                  className="border rounded-2xl p-8 shadow-sm"
+                  className="border rounded-2xl p-5 shadow-sm"
                 >
+                  <h2 className="mt-8 text-4xl font-bold mb-10">{pkg.title}</h2>
                   <img
                     src={`/detailing/${pkg.slug}.png`}
                     alt={pkg.title}
                     className="w-full max-w-2xl mx-auto rounded-xl object-contain"
                   />
-
-                  <h2 className="mt-8 text-4xl font-bold">{pkg.title}</h2>
 
                   <p className="mt-4 text-gray-600 text-lg">
                     {pkg.description}

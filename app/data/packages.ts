@@ -100,10 +100,10 @@ export const packages: PackageItem[] = [
   {
     slug: "ceramic-coating-offer",
     category: "package",
-    title: "Ceramic Coating Offer",
+    title: "3M Ceramic Coating Offer",
     subtitle: "Limited Time Premium Protection",
     actualPrice: 16500,
-    offerPrice: 9999,
+    offerPrice: 13000,
     shortDesc:
       "Premium ceramic coating for any make & model with Elite Care membership and protection combo absolutely free.",
     description:
@@ -275,7 +275,7 @@ export const packages: PackageItem[] = [
   {
     slug: "vista",
     category: "detailing",
-    title: "Vista Detailing Offer",
+    title: "Vista Ceramic Coating Offer",
     subtitle: "Limited Time Premium Protection",
     actualPrice: 16500,
     offerPrice: 9999,
