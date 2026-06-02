@@ -122,52 +122,52 @@ export const packages: PackageItem[] = [
 
   // ================= AMC =================
 
-  {
-    slug: "gold-amc",
-    category: "amc",
-    title: "Gold AMC",
-    duration: "1 Year",
-    actualPrice: 5999,
-    offerPrice: 1999,
-    shortDesc: "Essential annual care plan for worry-free ownership.",
-    description:
-      "Gold AMC provides cost-effective annual coverage with two complete service cycles ensuring smooth performance.",
-    includes: [
-      "2x PMS Services",
-      "2x Wheel Alignments",
-      "2x Wheel Balancings",
-      "2x Tyre Rotations",
-      "2x AC Check-ups",
-      "2x Electrical Check-ups",
-      "2x Brake Check-ups",
-      "2x Wiper Washer Fluid Top-ups",
-      "2x Oil Filter Replacements",
-    ],
-  },
+  // {
+  //   slug: "gold-amc",
+  //   category: "amc",
+  //   title: "Gold AMC",
+  //   duration: "1 Year",
+  //   actualPrice: 5999,
+  //   offerPrice: 1999,
+  //   shortDesc: "Essential annual care plan for worry-free ownership.",
+  //   description:
+  //     "Gold AMC provides cost-effective annual coverage with two complete service cycles ensuring smooth performance.",
+  //   includes: [
+  //     "2x PMS Services",
+  //     "2x Wheel Alignments",
+  //     "2x Wheel Balancings",
+  //     "2x Tyre Rotations",
+  //     "2x AC Check-ups",
+  //     "2x Electrical Check-ups",
+  //     "2x Brake Check-ups",
+  //     "2x Wiper Washer Fluid Top-ups",
+  //     "2x Oil Filter Replacements",
+  //   ],
+  // },
 
-  {
-    slug: "platinum-amc",
-    category: "amc",
-    title: "Platinum AMC",
-    duration: "1.5 Years",
-    actualPrice: 7999,
-    offerPrice: 2999,
-    shortDesc: "Extended protection with enhanced service benefits.",
-    description:
-      "Platinum AMC includes three full service cycles and brake disc cutting for superior maintenance.",
-    includes: [
-      "3x PMS Services",
-      "3x Wheel Alignments",
-      "3x Wheel Balancings",
-      "3x Tyre Rotations",
-      "3x AC Check-ups",
-      "3x Electrical Check-ups",
-      "3x Brake Check-ups",
-      "3x Wiper Washer Fluid Top-ups",
-      "3x Oil Filter Replacements",
-      "1x Brake Disc Cutting",
-    ],
-  },
+  // {
+  //   slug: "platinum-amc",
+  //   category: "amc",
+  //   title: "Platinum AMC",
+  //   duration: "1.5 Years",
+  //   actualPrice: 7999,
+  //   offerPrice: 2999,
+  //   shortDesc: "Extended protection with enhanced service benefits.",
+  //   description:
+  //     "Platinum AMC includes three full service cycles and brake disc cutting for superior maintenance.",
+  //   includes: [
+  //     "3x PMS Services",
+  //     "3x Wheel Alignments",
+  //     "3x Wheel Balancings",
+  //     "3x Tyre Rotations",
+  //     "3x AC Check-ups",
+  //     "3x Electrical Check-ups",
+  //     "3x Brake Check-ups",
+  //     "3x Wiper Washer Fluid Top-ups",
+  //     "3x Oil Filter Replacements",
+  //     "1x Brake Disc Cutting",
+  //   ],
+  // },
 
   {
     slug: "diamond-amc",
